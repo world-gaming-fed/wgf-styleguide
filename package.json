@@ -1,0 +1,32 @@
+{
+  "name": "styleguide",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "pretest": "node_modules/.bin/eslint *.js",
+    "test": "echo OK"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-eslint": "^4.1.0",
+    "react": "^0.13.3",
+    "react-styleguide-generator": "^1.1.5"
+  },
+  "devDependencies": {
+    "eslint-plugin-react": "^3.3.1",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^2.3.1",
+    "gulp-minify-css": "^1.2.1",
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^1.0.1",
+    "gulp-postcss": "^6.0.0",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-stylus": "^2.0.6",
+    "lost": "^6.5.0",
+    "react-docgen": "^2.0.0",
+    "require-dir": "^0.3.0",
+    "run-sequence": "^1.1.2"
+  }
+}

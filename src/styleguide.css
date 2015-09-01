@@ -1,0 +1,11 @@
+.app-body {
+  background-color: #eaeaea;
+}
+
+.app-body .sg-section-example-body {
+  padding: 0;
+}
+
+.get-some-space .sg-section-example-body {
+  padding: 100px 0
+}

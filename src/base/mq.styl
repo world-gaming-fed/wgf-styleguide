@@ -1,0 +1,63 @@
+pxToEm($px, $base-font-size = 16px) {
+  unit(($px / $base-font-size), em)
+}
+
+/* Media query system
+================== */
+
+/* Define the cache and the aliases
+----------------------------------- */
+$mq-cache = {};
+$mq-size = {
+  'medium': 641px,
+  'large': 961px,
+  'x-large': 1281px,
+  'xx-large': 1681px
+};
+
+$mq-aliases = {
+  'small'         : '(max-width: ' + pxToEm($mq-size.medium - 1) + ')',
+  'medium'        : '(min-width: ' + pxToEm($mq-size.medium) + ')',
+  'medium-only'   : '(min-width: ' + pxToEm($mq-size.medium) + ') and (max-width: ' + pxToEm($mq-size.large - 1) + ')',
+  'before-large'  : '(max-width: ' + pxToEm($mq-size.large - 1) + ')',
+  'large'         : '(min-width: ' + pxToEm($mq-size.large) + ')',
+  'large-only'    : '(min-width: ' + pxToEm($mq-size.large) + ') and (max-width: ' + pxToEm($mq-size.x-large - 1) + ')',
+  'x-large'       : '(min-width: ' + pxToEm($mq-size.x-large) + ')',
+  'x-large-only'  : '(min-width: ' + pxToEm($mq-size.x-large) + ') and (max-width: ' + pxToEm($mq-size.xx-large - 1) + ')',
+  'xx-large'      : '(min-width: ' + pxToEm($mq-size.xx-large) + ')'
+};
+
+/* Mixin for caching the blocks with the given conditions
+--------------------------------------------------------- */
+mq($condition) {
+  helper($condition) {
+    unless ($mq-cache[$condition]) {
+      $mq-cache[$condition] = ();
+    }
+    push($mq-cache[$condition], block);
+  }
+
+  +helper($condition) {
+    {selector() + ''} {
+      {block}
+    }
+  }
+}
+
+/* Function we would use to call all the cached styles
+------------------------------------------------------ */
+apply_mq_cache() {
+  for $media, $blocks in $mq-cache {
+    // @stylint off
+    $media = unquote($mq-aliases[$media] || $media)
+    $media = '(%s)' % $media unless match('\(', $media)
+    $media = 'only screen and %s' % $media
+    // @stylint on
+
+    @media $media {
+    for $block in $blocks {
+      {$block}
+    }
+  }
+  }
+}
