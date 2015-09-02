@@ -1,1 +1,0 @@
-module.exports = [require('/Users/dberseron/workspace/github/world-gaming-fed/styleguide/src/components/blocks/section/Section.example.js'),require('/Users/dberseron/workspace/github/world-gaming-fed/styleguide/src/components/blocks/section/Section.js')]

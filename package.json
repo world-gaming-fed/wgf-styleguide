@@ -12,6 +12,7 @@
   "dependencies": {
     "babel-eslint": "^4.1.0",
     "react": "^0.13.3",
+    "react-router": "^0.13.3",
     "react-styleguide-generator": "^1.1.5"
   },
   "devDependencies": {

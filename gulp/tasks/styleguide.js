@@ -9,7 +9,8 @@ gulp.task('styleguide', function (done) {
     output: 'dist/',
     files: [
       'src/main.css',
-      'src/styleguide.css'
+      'src/styleguide.css',
+      'http://fonts.googleapis.com/css?family=Lato:300,400,700,400italic'
     ],
     reactDocgen: {
       files: ['src/components/**/*.js']
