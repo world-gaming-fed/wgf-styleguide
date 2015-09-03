@@ -14,4 +14,12 @@ gulp.task('default', function(done) {
   );
 });
 
+gulp.task('build', function(done) {
+  runSequence(
+    'css-compile',
+    'styleguide',
+    done
+  );
+});
+
 gulp.task('lint', ['eslint']);

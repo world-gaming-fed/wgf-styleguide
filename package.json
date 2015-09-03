@@ -6,6 +6,7 @@
   "scripts": {
     "pretest": "node_modules/.bin/gulp lint",
     "test": "echo OK",
+    "postinstall": "node_modules/.bin/gulp build",
     "start": "node server.js"
   },
   "author": "",
