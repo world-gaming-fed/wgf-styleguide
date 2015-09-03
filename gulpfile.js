@@ -8,6 +8,8 @@ gulp.task('default', function(done) {
   runSequence(
     'css-compile',
     'styleguide',
+    'watch',
+    'node',
     done
   );
 });

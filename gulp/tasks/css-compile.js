@@ -35,7 +35,8 @@ gulp.task('css-compile', function cssCompile() {
     .pipe(minifyCss({compatibility: 'ie8'}))
     .pipe(sourcemaps.write('./source_mapping', {
       includeContent: false,
-      sourceRoot: '.'
+      sourceRoot: '.',
+      sourceMappingURLPrefix: '/files/'
     }))
     .pipe(gulp.dest('./src'))
     .pipe(notify('Stylus compiled'));
