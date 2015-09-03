@@ -13,3 +13,5 @@ gulp.task('default', function(done) {
     done
   );
 });
+
+gulp.task('lint', ['eslint']);
