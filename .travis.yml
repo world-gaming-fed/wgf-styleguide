@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+- '0.12'
+- '0.11'
+- '0.10'
+deploy:
+  provider: heroku
+  api_key:
+    secure: RlWfRFiY2CarlaP72JydP51seJz40ZsosVal+ddGJT+Tuklo0z9BnJpkBi+yg6e+n1J2PTsTjgOQwws/GYh/NSdOH2jAwvij1a9dRq8RfPivsqd6DOi++62t4UkWdBd2nNk5sx0mJprLUJV4IWmzi5T+qezNIjj9/hYQsI7wvu1m4lMRK4NFgWzefHIpMNtBaegHqI65kD2yJjkr6gE9FNWGeItOvBVeJ1OY3bIYTpmVN8affot8rXH+3I2N/UEEyd4S5Y+33owawexpJeRA2sMSTMD6lD+l9CM003L50MzStJgcX4wyT6pk65Zs2xsYwer2luQTBvWlVwxpFUreSUaUTeotSNOwCjvBQf7YeoeqSxFJ0RoT0GW/7PtK0JK2OCOHTs1nrZi6tSuaQOhMV0xSjLVeDpJ07qYx1ZHhPtwSjxEBpbMfbm6M6tLHCvBEXHv0eLXApxwEdfw/AHUGIL6DcV3qiQjASYTQrCiKG6FJAzez4FLtuRUsIwEh+XrjAxwA5t/EhXt8SZezweKegxUr2GTFJuXoxVpBfkMOYIk68AdWdI2hnJxMIwsRP04IXNOM1QP9MIzeLcVSTtLYprjSK3ImMKHUmmI59pLF4kgrtyItxYCKwbAVzjl32KDCxmWYZ6sJAwdEgeMqFxZStJ6lmX0s304CrDaZ/DweqLk=
+  app: wgf-styleguide
+  on:
+    branch: master
+    repo: world-gaming-fed/styleguide
