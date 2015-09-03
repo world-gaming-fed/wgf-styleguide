@@ -18,7 +18,7 @@ export default class extends React.Component {
       <div>
         <Button className="classTest">button</Button>
         &nbsp;
-        <Button href="http://example.com/" title="" className="classTest">link</Button>
+        <Button className="classTest" href="http://example.com/" title="Title test">link</Button>
       </div>
     )
   }

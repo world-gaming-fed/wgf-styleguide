@@ -3,9 +3,9 @@ var React = require('react');
 var ThumbBlock = React.createClass({
   displayName: 'ThumbBlock',
   propTypes: {
-    imageUrl: React.PropTypes.string,
     children: React.PropTypes.element,
-    head: React.PropTypes.element
+    head: React.PropTypes.element,
+    imageUrl: React.PropTypes.string
   },
 
   buildHead: function() {

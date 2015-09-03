@@ -35,7 +35,7 @@ export default class extends React.Component {
 
     return (
     <div>
-      <ThumbBlock imageUrl="http:\/\/placehold.it/150x250" head={head}>
+      <ThumbBlock head={head} imageUrl="http:\/\/placehold.it/150x250">
         <p>Content</p>
       </ThumbBlock>
     </div>

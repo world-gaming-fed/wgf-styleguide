@@ -5,11 +5,13 @@ var PropTypes = React.PropTypes;
 var Button = React.createClass({
   displayName: 'Button',
   propTypes: {
-    className: PropTypes.string,
     children: PropTypes.oneOfType([
       PropTypes.string,
       PropTypes.element
-    ])
+    ]),
+    className: PropTypes.string,
+    href: PropTypes.string,
+    to: PropTypes.string
   },
   render: function() {
     var classString = 'Button';

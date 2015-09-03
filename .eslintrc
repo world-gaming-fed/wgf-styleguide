@@ -1,13 +1,15 @@
 {
   "ecmaFeatures": {
     "jsx": true,
-    "classes": true
+    "classes": true,
+    "modules": true
   },
   "env": {
     "amd": true,
     "browser": true,
     "node": true
   },
+  "parser": "babel-eslint",
   "plugins": [
     "react",
     "require-path-exists"
