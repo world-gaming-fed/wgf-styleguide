@@ -4,9 +4,16 @@ var app = express();
 
 app.use(express.static('dist'));
 
-var server = app.listen(3000, function () {
-  var host = server.address().address;
-  var port = server.address().port;
+app.start = function() {
+  var port = process.env.PORT || 3000;
 
-  console.log('Example app listening at http://%s:%s', host, port);
-});
+  // start the web server
+  return app.listen(port, function() {
+    console.log('[Web] server listening at: ' + port + ', in: ' + process.env.NODE_ENV);
+  });
+};
+
+// start the server if `$ node server.js`
+if (require.main === module) {
+  app.start();
+}
