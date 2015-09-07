@@ -1,0 +1,29 @@
+remFontSize($value, $lineheight = '', $ieProtect = false){
+  font-size: $value
+  if ($lineheight != '') {
+    line-height: unit($lineheight, 'px')
+  }
+  else {
+    line-height: unit($value*1.2, 'px')
+  }
+  if ($ieProtect) {
+    font-size: unit($value*62.5/100/10, 'rem')
+    .no-ie & {
+      if ($lineheight != '') {
+        line-height: unit($lineheight*62.5/100/10, 'rem')
+      }
+      else {
+        line-height: unit($value*62.5/100/10*1.2, 'rem')
+      }
+    }
+  }
+  else {
+    font-size: unit($value*62.5/100/10, 'rem')
+    if ($lineheight != '') {
+      line-height: unit($lineheight*62.5/100/10, 'rem')
+    }
+    else {
+      line-height: unit($value*62.5/100/10*1.2, 'rem')
+    }
+  }
+}

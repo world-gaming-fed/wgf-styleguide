@@ -7,6 +7,8 @@ requireDir('./gulp/tasks');
 gulp.task('default', function(done) {
   runSequence(
     'css-compile',
+    'build-clean',
+    'build-react',
     'styleguide',
     'watch',
     'node',
@@ -16,6 +18,8 @@ gulp.task('default', function(done) {
 
 gulp.task('build', function(done) {
   runSequence(
+    'build-clean',
+    'build-react',
     'css-compile',
     'styleguide',
     done

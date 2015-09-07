@@ -161,5 +161,6 @@ sftp-config.json
 # ------------------------------------------------------------------------------
 # Project
 dist/
+lib/
 src/main.css
 source_mapping/
