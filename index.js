@@ -18,10 +18,12 @@ var _ = require('lodash');
 
 module.exports = {
   block: {
-    Section: require('./lib/components/blocks/section/Section')
+    Section: require('./lib/components/blocks/section/Section'),
+    ThumbBlock: require('./lib/components/blocks/thumbBlock/ThumbBlock')
   },
   element: {
-    Button: require('./lib/components/elements/button/Button')
+    Button: require('./lib/components/elements/button/Button'),
+    TableList: require('./lib/components/elements/tableList/TableList')
   },
   container: {
     BtnContainer: require('./lib/components/containers/btnContainer/BtnContainer')

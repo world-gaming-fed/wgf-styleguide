@@ -5,6 +5,7 @@ var gulp = require('gulp');
 var files = require('../config').files;
 
 gulp.task('watch', function watch() {
-  gulp.watch(files.js, ['styleguide']);
-  return gulp.watch(files.styl, ['css-compile', 'styleguide']);
+  gulp.watch(files.styl, ['css-compile'])
+  gulp.watch([files.js, './src/main.css'], ['styleguide']);
+  return gulp.watch('./dist/index.html', ['notify']);
 });

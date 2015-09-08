@@ -5,7 +5,6 @@ var plumber = require('gulp-plumber');
 var stylus = require('gulp-stylus');
 var sourcemaps = require('gulp-sourcemaps');
 var autoprefixer = require('gulp-autoprefixer');
-var notify = require('gulp-notify');
 var postcss = require('gulp-postcss');
 var lost = require('lost');
 var minifyCss = require('gulp-minify-css');
@@ -38,6 +37,5 @@ gulp.task('css-compile', function cssCompile() {
       sourceRoot: '.',
       sourceMappingURLPrefix: '/files/'
     }))
-    .pipe(gulp.dest('./src'))
-    .pipe(notify('Stylus compiled'));
+    .pipe(gulp.dest('./src'));
 });
