@@ -26,6 +26,7 @@ module.exports = {
     TableList: require('./lib/components/elements/tableList/TableList')
   },
   container: {
-    BtnContainer: require('./lib/components/containers/btnContainer/BtnContainer')
+    BtnContainer: require('./lib/components/containers/btnContainer/BtnContainer'),
+    RenderIf: require('./lib/components/containers/renderIf/RenderIf')
   }
 }
