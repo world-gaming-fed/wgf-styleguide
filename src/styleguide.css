@@ -9,3 +9,7 @@
 .get-some-space .sg-section-example-body {
   padding: 100px 0
 }
+
+.get-some-little-space .sg-section-example-body {
+  padding: 20px
+}

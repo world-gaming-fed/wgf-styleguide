@@ -3,7 +3,7 @@
 var gulp = require('gulp');
 var rsg = require('react-styleguide-generator');
 
-gulp.task('styleguide', function (done) {
+gulp.task('styleguide-compile', function (done) {
   var rsgProcess = rsg('src/components/**/*.styleguide.js', {
     title: 'World Gaming Federation Styleguide',
     output: 'dist/',
@@ -24,4 +24,12 @@ gulp.task('styleguide', function (done) {
 
     done();
   });
+});
+
+gulp.task('styleguide', ['styleguide-compile'], function() {
+  gulp.src('./src/source_mapping/**')
+    .pipe(gulp.dest('./dist/files/source_mapping'));
+
+  return gulp.src('./src/**/*.styl')
+    .pipe(gulp.dest('./dist/files/source_mapping/src'));
 });
