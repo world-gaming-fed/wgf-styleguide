@@ -1,16 +1,23 @@
 'use strict'
 
 import React from 'react'
-import Field from './Field'
+var Field = require('./Field')(React);
 import Router from 'react-router'
 import Formsy from 'formsy-react'
+
 
 export default class extends React.Component {
   static styleguide = {
     category: 'Elements',
     title: 'Field',
     description: 'Create an action or a link button. It accepte all props and complete `className`. Work also with `to` attribute to create a react-router Link',
-    code: `<Field type="text"/>`,
+    code: `
+// Require
+var Field = require('wgf-styleguide').element.field(React);
+
+// Comopnent use
+<Field type="text"/>
+    `,
     className: 'app-body get-some-little-space',
     exampleComponent: Field
   }

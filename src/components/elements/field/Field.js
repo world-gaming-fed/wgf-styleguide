@@ -1,43 +1,53 @@
-var React = require('react');
-var PropTypes = React.PropTypes;
-var classnames = require('classnames');
 var Formsy = require('formsy-react');
+var classnames = require('classnames');
 
-var Field = React.createClass({
-  propTypes: {
-    className: PropTypes.string,
-    label: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
-    type: PropTypes.string
-  },
+module.exports = function(React) {
+  return React.createClass({
+    propTypes:{
+      className: React.PropTypes.string,
+      label: React.PropTypes.string.isRequired,
+      name: React.PropTypes.string.isRequired,
+      type: React.PropTypes.string,
+      validateOnLive: React.PropTypes.bool
+    },
 
-  mixins: [Formsy.Mixin],
+    mixins: [Formsy.Mixin],
 
-  changeValue: function (event) {
-    this.setValue(event.currentTarget.value);
-  },
+    changeValue: function (event) {
+      this.setValue(event.currentTarget.value);
+    },
 
-  render: function () {
-    var className = classnames(
-      this.props.className,
-      'Field',
-      {
-        'required': this.showRequired(),
-        'error': !this.showRequired() && this.showError()
+    validateOnLive: function(validateOnLive) {
+      var response = false;
+      if (validateOnLive) {
+        response = true;
       }
-    );
+      else {
+        response = this.isFormSubmitted();
+      }
+      return response;
+    },
 
-    var errorMessage = this.getErrorMessage();
+    render: function () {
+      var className = classnames(
+        this.props.className,
+        'Field',
+        {
+          'required': !this.isPristine() && this.validateOnLive(this.props.validateOnLive) && this.showRequired(),
+          'error': this.validateOnLive(this.props.validateOnLive) && !this.showRequired() && this.showError()
+        }
+      );
 
-    return (
-      <div className={className}>
-        <label htmlFor={this.props.name}>{this.props.label}</label>
-        <input name={this.props.name} onChange={this.changeValue} placeholder={this.props.label} type={this.props.type || 'text'} value={this.getValue()}/>
-        <span className="Field__error">{errorMessage}</span>
-      </div>
-    );
-  }
+      var errorMessage = this.getErrorMessage();
 
-});
+      return (
+        <div className={className}>
+          <label htmlFor={this.props.name}>{this.props.label  + (this.isRequired() ? '*' : null)}</label>
+          <input name={this.props.name} onChange={this.changeValue} placeholder={this.props.label  + (this.isRequired() ? '*' : null)} type={this.props.type || 'text'} value={this.getValue()}/>
+          <span className="Field__error">{errorMessage}</span>
+        </div>
+      );
+    }
 
-module.exports = Field;
+  });
+}

@@ -5,7 +5,8 @@ $input-text {
 }
 
 .Field {
-  &__error {
+  &__error,
+  &__required {
     display: block;
     opacity: 0;
     transition: opacity 250ms;
@@ -16,7 +17,8 @@ $input-text {
       content: '\00a0';
     }
 
-    .error & {
+    .error &,
+    .required & {
       opacity: 1;
     }
   }
@@ -36,8 +38,10 @@ $input-text {
     box-shadow: 0 4px 0 #E8E8E8;
     margin-bottom: 4px;
     outline: none;
+    color: #333;
 
-    .error& {
+    .error&,
+    .required& {
       box-shadow: 0 4px 0 $colors.error;
     }
   }
