@@ -1,3 +1,11 @@
+.displayNone {
+  border-top: 0;
+}
+
+.displayNone .sg-section-example-body {
+  display: none;
+}
+
 .app-body {
   background-color: #eaeaea;
 }
@@ -7,9 +15,20 @@
 }
 
 .get-some-space .sg-section-example-body {
-  padding: 100px 0
+  padding: 100px 0;
 }
 
 .get-some-little-space .sg-section-example-body {
-  padding: 20px
+  padding: 20px;
+}
+
+.sg-icon-list {
+  font-size: 20px;
+  overflow: hidden;
+}
+
+.sg-icon-list [class^="wgf-icon"] {
+  display: block;
+  float: left;
+  margin: 10px;
 }

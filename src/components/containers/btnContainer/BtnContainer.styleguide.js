@@ -10,7 +10,7 @@ export default class extends React.Component {
     title: 'BtnContainer',
     description: 'Container for button with particular adjustement for buttons.',
     code: `
-<BtnContainer>
+<BtnContainer [modifiers="full"]>
   [Buttons]
 </BtnContainer>
     `,

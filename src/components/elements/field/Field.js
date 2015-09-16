@@ -3,6 +3,7 @@ var classnames = require('classnames');
 
 module.exports = function(React) {
   return React.createClass({
+    displayName: 'Field',
     propTypes:{
       className: React.PropTypes.string,
       label: React.PropTypes.string.isRequired,
@@ -34,7 +35,7 @@ module.exports = function(React) {
         'Field',
         {
           'required': !this.isPristine() && this.validateOnLive(this.props.validateOnLive) && this.showRequired(),
-          'error': this.validateOnLive(this.props.validateOnLive) && !this.showRequired() && this.showError()
+          'error': !this.isPristine() && this.validateOnLive(this.props.validateOnLive) && !this.showRequired() && this.showError()
         }
       );
 
@@ -42,8 +43,8 @@ module.exports = function(React) {
 
       return (
         <div className={className}>
-          <label htmlFor={this.props.name}>{this.props.label  + (this.isRequired() ? '*' : null)}</label>
-          <input name={this.props.name} onChange={this.changeValue} placeholder={this.props.label  + (this.isRequired() ? '*' : null)} type={this.props.type || 'text'} value={this.getValue()}/>
+          <label htmlFor={this.props.name}>{this.props.label  + (this.isRequired() ? '*' : '')}</label>
+          <input name={this.props.name} onChange={this.changeValue} placeholder={this.props.label  + (this.isRequired() ? '*' : '')} type={this.props.type || 'text'} value={this.getValue()}/>
           <span className="Field__error">{errorMessage}</span>
         </div>
       );
