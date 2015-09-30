@@ -1,5 +1,6 @@
 var Formsy = require('formsy-react');
 var classnames = require('classnames');
+var _ = require('lodash');
 
 module.exports = function(React) {
   return React.createClass({
@@ -8,14 +9,26 @@ module.exports = function(React) {
       className: React.PropTypes.string,
       label: React.PropTypes.string.isRequired,
       name: React.PropTypes.string.isRequired,
+      onChange: React.PropTypes.func,
       type: React.PropTypes.string,
-      validateOnLive: React.PropTypes.bool
+      validateOnLive: React.PropTypes.bool,
+      withoutValidation: React.PropTypes.bool
     },
 
     mixins: [Formsy.Mixin],
+    waitingForActionTimeout: null,
 
     changeValue: function (event) {
       this.setValue(event.currentTarget.value);
+
+      if (this.props.onChange && typeof this.props.onChange === 'function') {
+        if (this.waitingForActionTimeout) {
+          clearTimeout(this.waitingForActionTimeout);
+        }
+        this.waitingForActionTimeout = setTimeout(function(e) {
+          this.props.onChange(e);
+        }.bind(this, _.clone(event)), 250);
+      }
     },
 
     validateOnLive: function(validateOnLive) {
@@ -34,6 +47,7 @@ module.exports = function(React) {
         this.props.className,
         'Field',
         {
+          'withoutValidation': this.props.withoutValidation,
           'required': !this.isPristine() && this.validateOnLive(this.props.validateOnLive) && this.showRequired(),
           'error': !this.isPristine() && this.validateOnLive(this.props.validateOnLive) && !this.showRequired() && this.showError()
         }
@@ -43,8 +57,8 @@ module.exports = function(React) {
 
       return (
         <div className={className}>
-          <label htmlFor={this.props.name}>{this.props.label  + (this.isRequired() ? '*' : '')}</label>
-          <input name={this.props.name} onChange={this.changeValue} placeholder={this.props.label  + (this.isRequired() ? '*' : '')} type={this.props.type || 'text'} value={this.getValue()}/>
+          <label htmlFor={this.props.name}>{this.props.label + (this.isRequired() ? '*' : '')}</label>
+          <input autoComplete="off" name={this.props.name} onChange={this.changeValue} placeholder={this.props.label  + (this.isRequired() ? '*' : '')} type={this.props.type || 'text'} value={this.getValue()}/>
           <span className="Field__error">{errorMessage}</span>
         </div>
       );
