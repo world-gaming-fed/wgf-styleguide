@@ -17,6 +17,9 @@ var _ = require('lodash');
 }*/
 
 module.exports = {
+  logic: {
+    IfDataExist: require('./lib/components/logic/IfDataExist')
+  },
   block: {
     Section: require('./lib/components/blocks/section/Section'),
     ThumbBlock: require('./lib/components/blocks/thumbBlock/ThumbBlock')
