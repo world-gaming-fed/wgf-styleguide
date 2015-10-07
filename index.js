@@ -25,7 +25,7 @@ module.exports = {
     ThumbBlock: require('./lib/components/blocks/thumbBlock/ThumbBlock')
   },
   element: {
-    Button: require('./lib/components/elements/button/Button'),
+    button: require('./lib/components/elements/button/Button'),
     field: require('./lib/components/elements/field/Field'),
     TableList: require('./lib/components/elements/tableList/TableList')
   },

@@ -1,7 +1,7 @@
 'use strict'
 
 import React from 'react'
-import Button from './Button'
+var Button = require('./Button')(React);
 import Router from 'react-router'
 
 export default class extends React.Component {

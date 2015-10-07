@@ -2,7 +2,7 @@
 
 import React from 'react'
 import BtnContainer from './BtnContainer'
-import Button from '../../elements/button/Button'
+var Button = require('../../elements/button/Button')(React);
 
 export default class extends React.Component {
   static styleguide = {
