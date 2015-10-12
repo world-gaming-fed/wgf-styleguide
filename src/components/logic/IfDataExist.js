@@ -1,4 +1,5 @@
 var React = require('react');
+var _ = require('lodash');
 var PropTypes = React.PropTypes;
 
 var IfDataExist = React.createClass({
@@ -13,18 +14,7 @@ var IfDataExist = React.createClass({
   },
 
   isDataExist: function(data) {
-    var isExist = false;
-    if (data) {
-      switch(typeof data) {
-        case 'string':
-        case 'array':
-          isExist = !!data.length;
-          break;
-        default:
-          isExist = true;
-      }
-    }
-    return isExist;
+    return !_.isEmpty(data);
   },
 
   render: function() {
