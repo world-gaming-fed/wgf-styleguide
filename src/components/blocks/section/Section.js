@@ -1,9 +1,10 @@
-var React = require('react/addons');
+var React = require('react');
+var classNames = require('classnames');
 
 var Section = React.createClass({
   displayName: 'Section',
 
-  propTypes:     {
+  propTypes: {
     /**
      * Element to put at the right of the title
      */
@@ -28,10 +29,10 @@ var Section = React.createClass({
     var additionnalInfos;
 
     if (this.props.modifier) {
-      classes = React.addons.classSet('Section', this.props.modifier);
+      classes = classNames('Section', this.props.modifier);
     }
     else {
-      classes = React.addons.classSet('Section');
+      classes = classNames('Section');
     }
 
     if (this.props.additionalInfos) {
