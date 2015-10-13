@@ -15,11 +15,11 @@
     "classnames": "^2.1.5",
     "express": "^4.13.3",
     "lodash": "^3.10.1",
+    "react": "^0.13.3",
     "react-router": "^0.13.3",
-    "react-styleguide-generator": "^1.1.5"
+    "react-styleguide-generator": "1.1.5"
   },
   "peerDependencies": {
-    "react": "^0.13.3",
     "formsy-react": "^0.14.1"
   },
   "devDependencies": {
@@ -42,7 +42,6 @@
     "lost": "^6.5.0",
     "react-docgen": "^2.0.0",
     "require-dir": "^0.3.0",
-    "react": "^0.13.3",
     "run-sequence": "^1.1.2"
   }
 }
