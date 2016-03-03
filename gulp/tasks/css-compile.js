@@ -7,7 +7,7 @@ var sourcemaps = require('gulp-sourcemaps');
 var autoprefixer = require('gulp-autoprefixer');
 var postcss = require('gulp-postcss');
 var lost = require('lost');
-var minifyCss = require('gulp-minify-css');
+var cleanCSS = require('gulp-clean-css');
 
 var entryFile = require('../config/').entryFile;
 
@@ -18,11 +18,11 @@ gulp.task('css-compile', function cssCompile() {
     .pipe(stylus({
       'include css': true,
       sourcemap: {
-        inline: true,
+        inline: global.ENV === 'production',
         sourceRoot: '.',
         basePath: '.'
       },
-      compress: true
+      compress: global.ENV === 'production'
     }))
     .pipe(sourcemaps.init({
       loadMaps: true
@@ -31,9 +31,9 @@ gulp.task('css-compile', function cssCompile() {
       lost()
     ]))
     .pipe(autoprefixer())
-    .pipe(minifyCss({compatibility: 'ie8'}))
+    .pipe(cleanCSS({compatibility: 'ie8'}))
     .pipe(sourcemaps.write('./source_mapping', {
-      includeContent: false,
+      includeContent: true,
       sourceRoot: '.',
       sourceMappingURLPrefix: '/files/'
     }))

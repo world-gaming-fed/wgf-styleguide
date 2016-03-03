@@ -1,31 +1,12 @@
 'use strict';
 
-var fs = require('fs');
-var _ = require('lodash');
-
-/*module.exports = function(type, component) {
-  if (arguments.length !== 2) {
-    throw new Error('you must specify a type and a component');
-  }
-
-  var componentPath = './lib/components/' +
-   type.toLowerCase() +
-   '/' + component.toLowerCase() +
-   '/' + _.capitalize(component);
-
-  return require(componentPath);
-}*/
-
 module.exports = {
   logic: {
     IfDataExist: require('./lib/components/logic/IfDataExist')
   },
-  block: {
-    Section: require('./lib/components/blocks/section/Section'),
-    ThumbBlock: require('./lib/components/blocks/thumbBlock/ThumbBlock')
-  },
+  block: require('./lib'),
   element: {
-    button: require('./lib/components/elements/button/Button'),
+    button: require('./lib/components/elements/buttons/button/Button'),
     field: require('./lib/components/elements/field/Field'),
     TableList: require('./lib/components/elements/tableList/TableList')
   },

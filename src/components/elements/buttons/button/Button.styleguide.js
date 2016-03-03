@@ -2,7 +2,6 @@
 
 import React from 'react'
 var Button = require('./Button')(React);
-import Router from 'react-router'
 
 export default class extends React.Component {
   static styleguide = {

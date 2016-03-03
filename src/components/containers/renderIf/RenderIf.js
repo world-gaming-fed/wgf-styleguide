@@ -9,7 +9,7 @@ var RenderIf = React.createClass({
 
   render: function() {
     if (!this.props.condition) {
-      return null
+      return null;
     }
     else {
       return (

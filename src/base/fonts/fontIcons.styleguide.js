@@ -13,7 +13,10 @@ export default class extends React.Component {
   render () {
     return(
       <p className="sg-icon-list">
-        <span className="wgf-icon-uniE600"></span>
+        <span className="wgf-icon-arrows_plus"></span>
+        <span className="wgf-icon-arrows_right"></span>
+        <span className="wgf-icon-twitter"></span>
+        {/*<span className="wgf-icon-uniE600"></span>
         <span className="wgf-icon-back"></span>
         <span className="wgf-icon-backwardsbubble"></span>
         <span className="wgf-icon-bag2"></span>
@@ -124,7 +127,7 @@ export default class extends React.Component {
         <span className="wgf-icon-wallet"></span>
         <span className="wgf-icon-washer"></span>
         <span className="wgf-icon-wireless"></span>
-        <span className="wgf-icon-X"></span>
+        <span className="wgf-icon-X"></span>*/}
       </p>
     )
   }

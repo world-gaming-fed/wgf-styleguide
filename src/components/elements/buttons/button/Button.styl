@@ -1,0 +1,66 @@
+$button {
+  display inline-block
+  background none
+  padding 0
+  margin 0
+  border-width 0
+  text-transform uppercase
+  text-align: center;
+  text-decoration: none;
+}
+
+$Button = {
+  color: {
+    text: $palette.white,
+    bg: $palette.coolBlue
+  }
+}
+
+.Button {
+  @extend $button
+  color: $Button.color.text;
+  font-weight: normal;
+  padding: 5px 10px;
+  border-radius: 4px;
+  background-color: $Button.color.bg;
+  box-shadow: 0 $uiThickness 0 darken($Button.color.bg, 30%);
+  outline: 0;
+  margin-bottom: 5px;
+  remFontSize($fontSize.small);
+  transition: all 125ms ease;
+
+  &:hover,
+  &:focus {
+    background-color: lighten($Button.color.bg, 10%);
+    box-shadow: 0 $uiThickness 0 darken($Button.color.bg, 20%);
+  }
+
+  &:active {
+    transform: translateY($uiThickness);
+    box-shadow: none;
+  }
+
+  &--full {
+    display: block;
+    width: 100%;
+  }
+}
+
+.iconButton {
+  @extend $button;
+  text-decoration none
+  display inline-block
+  width 40px
+  height 40px
+  color #fff
+  line-height 40px
+  font-size 20px
+  text-align center
+  border-radius 50%
+  background-color: $Button.color.bg;
+  transition all ease 500ms
+
+  &--alt {
+    background-color #50E3C2;
+  }
+}

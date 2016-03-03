@@ -10,7 +10,8 @@ gulp.task('styleguide-compile', function (done) {
     files: [
       'src/main.css',
       'src/styleguide.css',
-      'http://fonts.googleapis.com/css?family=Lato:300,400,700,400italic'
+      '//fonts.googleapis.com/css?family=Lato:300,400,700,400italic',
+      'https://i.icomoon.io/public/dd081299bf/WGFMainSite/style.css'
     ],
     reactDocgen: {
       files: ['src/**/*.js']

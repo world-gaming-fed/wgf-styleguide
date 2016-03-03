@@ -1,9 +1,15 @@
+@import url("//fonts.googleapis.com/css?family=Lato:300,400,700,400italic");
+
 .displayNone {
   border-top: 0;
 }
 
 .displayNone .sg-section-example-body {
   display: none;
+}
+
+.sg-section-example-body {
+  font-family: Lato, "sans-serif";
 }
 
 .app-body {
@@ -31,4 +37,8 @@
   display: block;
   float: left;
   margin: 10px;
+}
+
+.demoSpace {
+  padding: 20px;
 }
