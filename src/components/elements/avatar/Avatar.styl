@@ -1,0 +1,15 @@
+$Avatar = {
+  colors: {
+    boxShadow: $palette.darkGrey
+  }
+}
+
+.Avatar {
+  display: inline-block;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 50px;
+  height: @width;
+  box-shadow: 0 0 4px $Avatar.colors.boxShadow;
+  background-size: cover;
+}

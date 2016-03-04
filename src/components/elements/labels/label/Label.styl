@@ -1,0 +1,22 @@
+$Label = {
+  colors: {
+    bg: $palette.white
+  }
+}
+
+.Label {
+  display: inline-block;
+  font-weight: $font.bold;
+  text-transform: uppercase;
+  background: $Label.colors.bg;
+  padding: 2px 4px;
+  text-align: center;
+
+  .labelCtnr & {
+    margin-left: 5px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}

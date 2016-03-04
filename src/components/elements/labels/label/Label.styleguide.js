@@ -8,13 +8,19 @@ export default class extends React.Component {
     category: 'Elements',
     title: 'Label',
     description: 'Label component, initialy created for plateforme label.',
-    code: `<Label text="String" />`,
+    code: `<Label>Any string</Label>`,
     exampleComponent: Label
   }
 
   render () {
     return (
-      <Label text="ps4" />
+      <div className="demoSpace th--official">
+        <Label>ps4</Label>
+        &nbsp;
+        <Label>One</Label>
+        &nbsp;
+        <Label>Wonderswan colors</Label>
+      </div>
     )
   }
 }

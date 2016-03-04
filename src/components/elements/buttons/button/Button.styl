@@ -25,7 +25,7 @@ $Button = {
   background-color: $Button.color.bg;
   box-shadow: 0 $uiThickness 0 darken($Button.color.bg, 30%);
   outline: 0;
-  margin-bottom: 5px;
+  margin-bottom: $uiThickness; // Compensation for shadow
   remFontSize($fontSize.small);
   transition: all 125ms ease;
 
@@ -35,14 +35,51 @@ $Button = {
     box-shadow: 0 $uiThickness 0 darken($Button.color.bg, 20%);
   }
 
-  &:active {
-    transform: translateY($uiThickness);
-    box-shadow: none;
+  [class^="wgf-icon-"] {
+    display: inline-block;
+    margin-right: 5px;
+    font-size: 1.4em;
+    line-height: inherit;
   }
 
+  &__text,
+  [class^="wgf-icon-"] {
+    vertical-align: text-top;
+  }
+
+  // Modifier full width
   &--full {
     display: block;
     width: 100%;
+  }
+
+  // Twitter version
+  &--twitter {
+    background-color: $specialePalette.twitter;
+    box-shadow: 0 $uiThickness 0 darken($specialePalette.twitter, 30%);
+
+    &:hover,
+    &:focus {
+      background-color: lighten($specialePalette.twitter, 10%);
+      box-shadow: 0 $uiThickness 0 darken($specialePalette.twitter, 20%);
+    }
+  }
+
+  // Facebook version
+  &--facebook {
+    background-color: $specialePalette.facebook;
+    box-shadow: 0 $uiThickness 0 darken($specialePalette.facebook, 30%);
+
+    &:hover,
+    &:focus {
+      background-color: lighten($specialePalette.facebook, 10%);
+      box-shadow: 0 $uiThickness 0 darken($specialePalette.facebook, 20%);
+    }
+  }
+
+  &:active {
+    transform: translateY($uiThickness);
+    box-shadow: none;
   }
 }
 

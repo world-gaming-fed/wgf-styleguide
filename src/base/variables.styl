@@ -8,6 +8,8 @@ $font - Object containing some font-weight particularities
 Style Guide: 1.1
 */
 
+@require 'colors/palette';
+
 $size = {
   default: 980px
 }
@@ -15,7 +17,9 @@ $size = {
 $bg-offcanvas = #333
 
 $font = {
-  light: 300
+  light: 300,
+  normal: normal,
+  bold: bold
 }
 
 $fontSize = {
@@ -40,3 +44,4 @@ $colors = {
 }
 
 $uiThickness = .3em;
+$shadow = $palette.darkGrey;

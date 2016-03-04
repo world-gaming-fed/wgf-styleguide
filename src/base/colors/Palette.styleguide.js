@@ -28,6 +28,7 @@ export default class extends React.Component {
         <span className="demoPalette demoPalette--mutedBlue">#mutedBlue</span>
         <span className="demoPalette demoPalette--petrol">#petrol</span>
         <span className="demoPalette demoPalette--navy">#navy</span>
+        <span className="demoPalette demoPalette--mango">#mango</span>
         <span className="demoPalette demoPalette--orangeRed">#orangeRed</span>
         <span className="demoPalette demoPalette--tomatoRed">#tomatoRed</span>
       </div>

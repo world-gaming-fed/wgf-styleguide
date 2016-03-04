@@ -5,11 +5,11 @@ var React = require('react');
 var Label = React.createClass({
   displayName: 'Label',
   propTypes: {
-    text: React.PropTypes.string.isRequired
+    children: React.PropTypes.string.isRequired
   },
   render: function() {
     return (
-      <span className="Label">{this.props.text}</span>
+      <span className="Label">{this.props.children}</span>
     );
   }
 });

@@ -15,9 +15,15 @@ export default class extends React.Component {
   render () {
     return (
       <div>
+        <Button className="classTest" icon="arrows_plus">Icon button</Button>
+        &nbsp;
         <Button className="classTest">button</Button>
         &nbsp;
         <Button className="classTest" href="http://example.com/" title="Title test">link</Button>
+        &nbsp;
+        <Button className="Button--twitter classTest" icon="twitter">02345</Button>
+        &nbsp;
+        <Button className="Button--facebook classTest" icon="facebook">1k like</Button>
       </div>
     )
   }

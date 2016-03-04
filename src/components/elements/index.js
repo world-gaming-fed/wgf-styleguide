@@ -1,9 +1,10 @@
 module.exports = {
   buttons: require('./buttons'),
   links: require('./links'),
+  labels: require('./labels'),
 
-  Field: require('./field/Field'),
-  Label: require('./label/Label'),
-  TableList: require('./tableList/TableList'),
-  Title: require('./title/Title')
+  Avatar: require('./avatar/Avatar'),
+  field: require('./field/Field'),
+  Icon: require('./icon/Icon'),
+  TableList: require('./tableList/TableList')
 };

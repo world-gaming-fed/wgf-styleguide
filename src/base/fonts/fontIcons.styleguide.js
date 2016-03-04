@@ -16,6 +16,8 @@ export default class extends React.Component {
         <span className="wgf-icon-arrows_plus"></span>
         <span className="wgf-icon-arrows_right"></span>
         <span className="wgf-icon-twitter"></span>
+        <span className="wgf-icon-facebook"></span>
+        <span className="wgf-icon-loupe"></span>
         {/*<span className="wgf-icon-uniE600"></span>
         <span className="wgf-icon-back"></span>
         <span className="wgf-icon-backwardsbubble"></span>

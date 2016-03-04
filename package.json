@@ -18,7 +18,8 @@
     "lodash": "^3.10.1",
     "react": "^0.13.3",
     "react-router": "^0.13.3",
-    "react-styleguide-generator": "1.1.5"
+    "react-styleguide-generator": "1.1.5",
+    "stylus": "^0.53.0"
   },
   "peerDependencies": {
     "formsy-react": "^0.14.1"
