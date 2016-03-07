@@ -34,6 +34,9 @@ gulp.task('styleguide', ['styleguide-compile'], function() {
   gulp.src('./src/base/font/wgficons/fonts/**')
     .pipe(gulp.dest('./dist/assets/fonts'));
 
+  gulp.src('./src/components/elements/avatar/orga_mask.svg')
+    .pipe(gulp.dest('./dist/files'));
+
   return gulp.src('./src/**/*.styl')
     .pipe(gulp.dest('./dist/files/source_mapping/src'));
 });
