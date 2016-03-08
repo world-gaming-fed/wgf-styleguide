@@ -5,7 +5,7 @@
     height: 100px;
     padding: 10px 40px 10px 60px;
     display: inline-block;
-    background: linear-gradient($themes.official.bgColorStart 0%, $themes.official.bgColorEnd 100%);
+    background: linear-gradient($themes.official.bgColorStart 0%, lighten($themes.official.bgColorEnd, 40%) 100%);
     transform: skew(25deg);
     transform-origin: left bottom;
 
@@ -17,7 +17,7 @@
     }
 
     .th--social & {
-      background: linear-gradient($themes.social.bgColorStart 0%, $themes.social.bgColorEnd 100%);
+      background: linear-gradient($themes.social.bgColorStart 0%, lighten($themes.social.bgColorEnd, 20%) 100%);
     }
   }
 
