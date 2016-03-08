@@ -1,0 +1,42 @@
+.ContentPak {
+  background: none;
+
+  &__ctn {
+    height: 100px;
+    padding: 10px 40px 10px 60px;
+    display: inline-block;
+    background: linear-gradient($themes.official.bgColorStart 0%, $themes.official.bgColorEnd 100%);
+    transform: skew(25deg);
+    transform-origin: left bottom;
+
+    &__inner {
+      height: 100%;
+      transform: skew(-25deg);
+      display: flex;
+      align-items: center;
+    }
+
+    .th--social & {
+      background: linear-gradient($themes.social.bgColorStart 0%, $themes.social.bgColorEnd 100%);
+    }
+  }
+
+  .Cover {
+    position: relative;
+    max-width: 190px;
+    height: auto;
+    margin-right: 20px;
+    bottom: -10px;
+    align-self: flex-end;
+  }
+
+  .Title {
+    font-weight: $font.normal;
+  }
+
+  .Plus--main {
+    display: block;
+    position: relative;
+    left: 20px;
+  }
+}
