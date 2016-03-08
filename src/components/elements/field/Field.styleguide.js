@@ -1,9 +1,8 @@
-'use strict'
+'use strict';
 
-import React from 'react'
+import React from 'react';
 var Field = require('./Field')(React);
-import Router from 'react-router'
-import Formsy from 'formsy-react'
+import Formsy from 'formsy-react';
 
 
 export default class extends React.Component {
@@ -27,6 +26,6 @@ var Field = require('wgf-styleguide').element.field(React);
       <Formsy.Form>
         <Field name="email" label="Email" validateOnLive="true" validations="isEmail" validationError="This is not a valid email"/>
       </Formsy.Form>
-    )
+    );
   }
 }

@@ -14,7 +14,7 @@ var Plus = React.createClass({
   },
 
   render: function() {
-    var classes = ['Plus'];
+    var classes = [ 'Plus' ];
 
     if (this.props.modifier) {
       classes.push('Plus--' + this.props.modifier);

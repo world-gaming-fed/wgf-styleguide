@@ -1,10 +1,8 @@
-'use strict'
+'use strict';
 
-import React from 'react'
-import ContentPak from './ContentPak'
-import Label from '../../elements/labels/label/Label'
-import Plus from '../../elements/buttons/plus/Plus'
-import Avatar from '../../elements/avatar/Avatar'
+import React from 'react';
+import ContentPak from './ContentPak';
+import Plus from '../../elements/buttons/plus/Plus';
 
 export default class extends React.Component {
   static styleguide = {
@@ -54,6 +52,6 @@ export default class extends React.Component {
           <Plus modifier="main"/>
         </ContentPak>
       </div>
-    )
+    );
   }
 }

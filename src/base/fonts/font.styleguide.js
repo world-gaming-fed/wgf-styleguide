@@ -1,6 +1,6 @@
-'use strict'
+'use strict';
 
-import React from 'react'
+import React from 'react';
 
 export default class extends React.Component {
   static styleguide = {
@@ -8,11 +8,13 @@ export default class extends React.Component {
     category: 'Base',
     title: 'Font',
     description: 'Simply include the google font on your page',
-    code: `<link href="\/\/fonts.googleapis.com/css?family=Lato:300,400,700,400italic" rel="stylesheet" />`,
+    code: `
+<link href="\/\/fonts.googleapis.com/css?family=Lato:300,400,700,400italic" rel="stylesheet" />
+    `,
     className: 'displayNone'
   }
 
   render () {
-    return(<div></div>)
+    return (<div></div>);
   }
 }

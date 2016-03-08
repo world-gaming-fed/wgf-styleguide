@@ -4,14 +4,17 @@
     node: true
     es6: true
 
+  parser: babel-eslint
+
   plugins:
     - react
 
   ecmaFeatures:
+    experimentalObjectRestSpread: true
+    classes: true
     arrowFunctions: true
     binaryLiterals: true
     blockBindings: true
-    classes: true
     defaultParams: true
     destructuring: true
     forOf: true
@@ -251,10 +254,7 @@
     max-depth: # specify the maximum depth that blocks can be nested (off by default)
       - 2
       - 3
-    max-len:  # specify the maximum length of a line in your program (off by default)
-      - 2
-      - 100
-      - 2
+    max-len: 0 # specify the maximum length of a line in your program (off by default)
     max-params: # limits the number of parameters that can be used in the function declaration. (off by default)
       - 2
       - 5

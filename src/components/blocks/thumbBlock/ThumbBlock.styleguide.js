@@ -1,7 +1,7 @@
-'use strict'
+'use strict';
 
-import React from 'react'
-import ThumbBlock from './ThumbBlock'
+import React from 'react';
+import ThumbBlock from './ThumbBlock';
 
 export default class extends React.Component {
   static styleguide = {
@@ -14,7 +14,7 @@ export default class extends React.Component {
 </ThumbBlock>
     `,
     exampleComponent: ThumbBlock,
-    examples: [{
+    examples: [ {
       tabTitle: 'Without image',
       props: {
         head: 'test',
@@ -25,13 +25,13 @@ export default class extends React.Component {
       props: {
         children: '[HTML Content]'
       }
-    }]
+    } ]
   }
 
   render () {
     var head = (
       <h1>Test</h1>
-    )
+    );
 
     return (
     <div>
@@ -39,6 +39,6 @@ export default class extends React.Component {
         <p>Content</p>
       </ThumbBlock>
     </div>
-    )
+    );
   }
 }

@@ -5,7 +5,7 @@ var _ = require('lodash');
 module.exports = function(React) {
   return React.createClass({
     displayName: 'Field',
-    propTypes:{
+    propTypes: {
       className: React.PropTypes.string,
       label: React.PropTypes.string.isRequired,
       name: React.PropTypes.string.isRequired,
@@ -15,7 +15,7 @@ module.exports = function(React) {
       withoutValidation: React.PropTypes.bool
     },
 
-    mixins: [Formsy.Mixin],
+    mixins: [ Formsy.Mixin ],
     waitingForActionTimeout: null,
 
     changeValue: function (event) {
@@ -47,9 +47,9 @@ module.exports = function(React) {
         this.props.className,
         'Field',
         {
-          'withoutValidation': this.props.withoutValidation,
-          'required': !this.isPristine() && this.validateOnLive(this.props.validateOnLive) && this.showRequired(),
-          'error': !this.isPristine() && this.validateOnLive(this.props.validateOnLive) && !this.showRequired() && this.showError()
+          withoutValidation: this.props.withoutValidation,
+          required: !this.isPristine() && this.validateOnLive(this.props.validateOnLive) && this.showRequired(),
+          error: !this.isPristine() && this.validateOnLive(this.props.validateOnLive) && !this.showRequired() && this.showError()
         }
       );
 
@@ -58,11 +58,11 @@ module.exports = function(React) {
       return (
         <div className={className}>
           <label htmlFor={this.props.name}>{this.props.label + (this.isRequired() ? '*' : '')}</label>
-          <input autoComplete="off" name={this.props.name} onChange={this.changeValue} placeholder={this.props.label  + (this.isRequired() ? '*' : '')} type={this.props.type || 'text'} value={this.getValue()}/>
+          <input autoComplete="off" name={this.props.name} onChange={this.changeValue} placeholder={this.props.label + (this.isRequired() ? '*' : '')} type={this.props.type || 'text'} value={this.getValue()}/>
           <span className="Field__error">{errorMessage}</span>
         </div>
       );
     }
 
   });
-}
+};

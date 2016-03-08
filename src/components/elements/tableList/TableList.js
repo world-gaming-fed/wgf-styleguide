@@ -2,7 +2,6 @@
 
 var React = require('react');
 var PropTypes = React.PropTypes;
-var _ = require('lodash');
 
 var TableList = React.createClass({
   displayName: 'TableList',
@@ -21,15 +20,16 @@ var TableList = React.createClass({
   getInitialState: function() {
     return {
       colWidth: ''
-    }
+    };
   },
 
   buildColGroup: function(colWidth) {
+    var cols;
     if (!colWidth || !colWidth.length) {
       return null;
     }
 
-    var cols = colWidth.split(';').map(function(width) {
+    cols = colWidth.split(';').map(function(width) {
       return (
         <col width={width}/>
       );

@@ -1,7 +1,7 @@
-'use strict'
+'use strict';
 
-import React from 'react'
-import NotificationsCounter from './NotificationsCounter'
+import React from 'react';
+import NotificationsCounter from './NotificationsCounter';
 
 export default class extends React.Component {
   static styleguide = {
@@ -19,6 +19,6 @@ export default class extends React.Component {
         &nbsp;
         <span className="NotificationsCounter">99+</span>
       </div>
-    )
+    );
   }
 }

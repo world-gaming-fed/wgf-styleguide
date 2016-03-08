@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 import React from 'react';
 
@@ -9,11 +9,11 @@ export default class extends React.Component {
     description: 'complete color palette possible to use',
     code: `
     // Stylus
-    background-color: $palette.whiteGrey`,
+    background-color: $palette.whiteGrey`
   }
 
   render () {
-    return(
+    return (
       <div>
         <span className="demoPalette demoPalette--white">#white</span>
         <span className="demoPalette demoPalette--whiteGrey">#whiteGrey</span>
@@ -32,6 +32,6 @@ export default class extends React.Component {
         <span className="demoPalette demoPalette--orangeRed">#orangeRed</span>
         <span className="demoPalette demoPalette--tomatoRed">#tomatoRed</span>
       </div>
-    )
+    );
   }
 }
