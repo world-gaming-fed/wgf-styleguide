@@ -28,6 +28,10 @@
   padding: 20px;
 }
 
+.no-v-space .sg-section-example-body {
+  padding: 20px 0;
+}
+
 .sg-icon-list {
   font-size: 20px;
   overflow: hidden;

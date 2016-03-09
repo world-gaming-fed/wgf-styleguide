@@ -1,6 +1,6 @@
-'use strict'
+'use strict';
 
-import React from 'react'
+import React from 'react';
 
 export default class extends React.Component {
   static styleguide = {
@@ -13,7 +13,7 @@ export default class extends React.Component {
   }
 
   render () {
-    return(
+    return (
       <div>
         <div className="demoSpace th--social">
           <p>Paragraphe</p>
@@ -22,6 +22,6 @@ export default class extends React.Component {
           <p>Paragraphe</p>
         </div>
       </div>
-    )
+    );
   }
 }

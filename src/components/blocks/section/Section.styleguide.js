@@ -1,7 +1,7 @@
-'use strict'
+'use strict';
 
-import React from 'react'
-import Section from './Section'
+import React from 'react';
+import Section from './Section';
 
 export default class extends React.Component {
   static styleguide = {
@@ -13,26 +13,26 @@ export default class extends React.Component {
     // Component to use for generating additional examples
     exampleComponent: Section,
     // Array of additional example tabs
-    examples: [{
+    examples: [ {
       tabTitle: 'Default',
       props: {
         title: 'Title example',
         children: '[HTML content]'
       }
-    },{
+    }, {
       tabTitle: 'alt',
       props: {
         title: 'Title example',
         modifier: 'Section--alt',
         children: '[HTML content]'
       }
-    },{
+    }, {
       tabTitle: 'alt2',
       props: {
         title: 'Title example',
         modifier: 'Section--alt2',
         children: '[HTML content]'
       }
-    }]
+    } ]
   }
 }

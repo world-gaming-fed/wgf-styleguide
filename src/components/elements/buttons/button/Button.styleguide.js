@@ -1,6 +1,6 @@
-'use strict'
+'use strict';
 
-import React from 'react'
+import React from 'react';
 var Button = require('./Button')(React);
 
 export default class extends React.Component {
@@ -25,6 +25,6 @@ export default class extends React.Component {
         &nbsp;
         <Button className="Button--facebook classTest" icon="facebook">1k like</Button>
       </div>
-    )
+    );
   }
 }

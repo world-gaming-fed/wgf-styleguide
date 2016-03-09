@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 import React from 'react';
 import LinkTitle from './LinkTitle';
@@ -13,7 +13,7 @@ export default class extends React.Component {
   }
 
   render () {
-    return(
+    return (
       <div>
         <div className="demoSpace th--social">
           <LinkTitle href="#" titleModifier="head">Head</LinkTitle>
@@ -26,6 +26,6 @@ export default class extends React.Component {
           <LinkTitle href="#" headingLevel={3}>Default</LinkTitle>
         </div>
       </div>
-    )
+    );
   }
 }

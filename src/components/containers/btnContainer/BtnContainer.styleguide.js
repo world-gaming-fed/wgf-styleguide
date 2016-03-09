@@ -1,7 +1,7 @@
-'use strict'
+'use strict';
 
-import React from 'react'
-import BtnContainer from './BtnContainer'
+import React from 'react';
+import BtnContainer from './BtnContainer';
 var Button = require('../../elements/buttons/button/Button')(React);
 
 export default class extends React.Component {
@@ -32,6 +32,6 @@ export default class extends React.Component {
           <Button>Test</Button>
         </BtnContainer>
       </div>
-    )
+    );
   }
 }
