@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 import React from 'react';
 import Plus from './Plus';
@@ -13,7 +13,7 @@ export default class extends React.Component {
   }
 
   render () {
-    return(
+    return (
       <div>
         <div className="demoSpace th--social">
           <Plus />
@@ -24,6 +24,6 @@ export default class extends React.Component {
           <Plus modifier="main"/>
         </div>
       </div>
-    )
+    );
   }
 }

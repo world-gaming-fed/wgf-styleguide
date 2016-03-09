@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 import React from 'react';
 
@@ -14,12 +14,12 @@ export default class extends React.Component {
   }
 
   render () {
-    return(
+    return (
       <div>
         <h1 className="Title Title--head">Head</h1>
         <h2 className="Title Title--subHead">Sub Head</h2>
         <h3 className="Title">Default</h3>
       </div>
-    )
+    );
   }
 }

@@ -1,0 +1,46 @@
+$ContentNav = {
+  colors: {}
+}
+
+.ContentNav {
+  position: relative;
+  background: linear-gradient(lighten($themes.official.bgColorEnd, 40%) 0%, $themes.official.bgColorEnd 100%);
+
+  .th--social & {
+    background: linear-gradient(lighten($themes.social.bgColorEnd, 20%) 0%, $themes.social.bgColorEnd 100%);
+  }
+
+  &__list {
+    @extend $inlineList;
+
+    &__item {
+      font-weight: $font.normal;
+      text-transform: uppercase;
+
+      a, span {
+        cursor: pointer;
+        display: inline-block;
+        padding: 10px 20px;
+        text-decoration: none;
+        opacity: 0.7;
+        transition: opacity 170ms linear;
+
+        &.active {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &__bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    background-color: $palette.tomatoRed;
+
+    .state--mounted & {
+      transition: all 175ms ease;
+    }
+  }
+}

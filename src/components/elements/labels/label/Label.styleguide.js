@@ -1,7 +1,7 @@
-'use strict'
+'use strict';
 
-import React from 'react'
-import Label from './Label'
+import React from 'react';
+import Label from './Label';
 
 export default class extends React.Component {
   static styleguide = {
@@ -21,6 +21,6 @@ export default class extends React.Component {
         &nbsp;
         <Label>Wonderswan colors</Label>
       </div>
-    )
+    );
   }
 }

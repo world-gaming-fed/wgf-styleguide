@@ -1,7 +1,7 @@
-'use strict'
+'use strict';
 
-import React from 'react'
-import Icon from './Icon'
+import React from 'react';
+import Icon from './Icon';
 
 export default class extends React.Component {
   static styleguide = {
@@ -21,6 +21,6 @@ export default class extends React.Component {
         &nbsp;
         <Icon>arrow_right</Icon>
       </div>
-    )
+    );
   }
 }

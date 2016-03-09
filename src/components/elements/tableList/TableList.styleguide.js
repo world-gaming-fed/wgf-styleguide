@@ -1,7 +1,7 @@
-'use strict'
+'use strict';
 
-import React from 'react'
-import TableList from './TableList'
+import React from 'react';
+import TableList from './TableList';
 
 export default class extends React.Component {
   static styleguide = {
@@ -39,6 +39,6 @@ export default class extends React.Component {
           <td>test</td>
         </tr>
       </TableList>
-    )
+    );
   }
 }

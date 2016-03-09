@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "babel": "^6.5.2",
     "classnames": "^2.1.5",
     "express": "^4.13.3",
     "gulp-clean-css": "^2.0.3",
