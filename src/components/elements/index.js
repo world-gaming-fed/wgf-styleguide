@@ -6,5 +6,6 @@ module.exports = {
   Avatar: require('./avatar/Avatar'),
   field: require('./field/Field'),
   Icon: require('./icon/Icon'),
+  Select: require('./select/Select'),
   TableList: require('./tableList/TableList')
 };
