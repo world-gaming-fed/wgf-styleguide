@@ -6,11 +6,11 @@ var Avatar = React.createClass({
   propTypes: {
     url: React.PropTypes.string.isRequired,
     /**
-     * Enum: `org|user`
+     * Enum: `user|org`, Default: `user`
      */
     format: React.PropTypes.oneOf([ 'org', 'user' ]),
     /**
-     * Enum: `small|medium|large`
+     * Enum: `small|medium|large`, Default: `small`
      */
     size: React.PropTypes.oneOf([ 'small', 'medium', 'large' ])
   },

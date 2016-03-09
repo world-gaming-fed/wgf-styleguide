@@ -11,7 +11,6 @@ $Avatar = {
 
 .Avatar {
   display: inline-block;
-  overflow: hidden;
   background-size: 100%;
   width: unit($Avatar.sizes.user[0],'px');
   height: @width;
@@ -22,20 +21,16 @@ $Avatar = {
   }
 
   &--user {
+    width: unit($Avatar.sizes.user[0],'px');
+    height: @width;
+    overflow: hidden;
     box-shadow: 0 0 4px $Avatar.colors.boxShadowTOfficial;
     border-radius: 50%;
 
-    .th--official & {
-      box-shadow: 0 0 4px $Avatar.colors.boxShadowTOfficial;
-    }
     .th--social & {
       box-shadow: 0 0 4px $Avatar.colors.boxShadowTSocial;
     }
 
-    &.Avatar--small {
-      width: unit($Avatar.sizes.user[0],'px');
-      height: @width;
-    }
     &.Avatar--medium {
       width: unit($Avatar.sizes.user[1],'px');
       height: @width;
@@ -47,20 +42,15 @@ $Avatar = {
   }
 
   &--org {
-    filter: drop-shadow(0 0 4px $Avatar.colors.boxShadowTOfficial);
+    width: unit($Avatar.sizes.org[0][0],'px');
+    height: unit($Avatar.sizes.org[0][1],'px');
+    filter: drop-shadow(0 0 2px $Avatar.colors.boxShadowTOfficial);
     size:100%;
 
-    .th--official & {
-      filter: drop-shadow(0 0 4px $Avatar.colors.boxShadowTOfficial);
-    }
     .th--social & {
       filter: drop-shadow(0 0 4px $Avatar.colors.boxShadowTSocial);
     }
 
-    &.Avatar--small {
-      width: unit($Avatar.sizes.org[0][0],'px');
-      height: unit($Avatar.sizes.org[0][1],'px');
-    }
     &.Avatar--medium {
       width: unit($Avatar.sizes.org[1][0],'px');
       height: unit($Avatar.sizes.org[1][1],'px');
