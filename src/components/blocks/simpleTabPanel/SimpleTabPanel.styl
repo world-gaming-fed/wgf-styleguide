@@ -1,0 +1,29 @@
+$SimpleTabPanel = {
+
+}
+
+.SimpleTabPanel {
+  &__nav {
+    text-align: center;
+  }
+
+  &__panels {
+    overflow: hidden;
+    white-space: nowrap;
+
+    &__viewport {
+      transition: transform 250ms ease;
+
+      for i in 1..10 {
+        &.activePosition-{i} {
+          transform: translateX(unit(-(i * 100), '%'));
+        }
+      }
+    }
+
+    &__panel {
+      display: inline-block;
+      width: 100%;
+    }
+  }
+}
