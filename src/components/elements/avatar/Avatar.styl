@@ -1,15 +1,69 @@
 $Avatar = {
   colors: {
-    boxShadow: $palette.darkGrey
+    boxShadowTOfficial: $palette.darkGrey,
+    boxShadowTSocial: $palette.black
+  },
+  sizes: {
+    user: 30 50 125,
+    org: (35 30) (57 50) (142 125)
   }
 }
 
 .Avatar {
   display: inline-block;
-  border-radius: 50%;
-  overflow: hidden;
-  width: 50px;
+  background-size: 100%;
+  width: unit($Avatar.sizes.user[0],'px');
   height: @width;
-  box-shadow: 0 0 4px $Avatar.colors.boxShadow;
-  background-size: cover;
+
+  &__image {
+    display: block;
+    height: 100%;
+  }
+
+  &--user {
+    width: unit($Avatar.sizes.user[0],'px');
+    height: @width;
+    overflow: hidden;
+    box-shadow: 0 0 4px $Avatar.colors.boxShadowTOfficial;
+    border-radius: 50%;
+
+    .th--social & {
+      box-shadow: 0 0 4px $Avatar.colors.boxShadowTSocial;
+    }
+
+    &.Avatar--medium {
+      width: unit($Avatar.sizes.user[1],'px');
+      height: @width;
+    }
+    &.Avatar--large {
+      width: unit($Avatar.sizes.user[2],'px');
+      height: @width;
+    }
+  }
+
+  &--org {
+    width: unit($Avatar.sizes.org[0][0],'px');
+    height: unit($Avatar.sizes.org[0][1],'px');
+    filter: drop-shadow(0 0 2px $Avatar.colors.boxShadowTOfficial);
+    size:100%;
+
+    .th--social & {
+      filter: drop-shadow(0 0 4px $Avatar.colors.boxShadowTSocial);
+    }
+
+    &.Avatar--medium {
+      width: unit($Avatar.sizes.org[1][0],'px');
+      height: unit($Avatar.sizes.org[1][1],'px');
+    }
+    &.Avatar--large {
+      width: unit($Avatar.sizes.org[2][0],'px');
+      height: unit($Avatar.sizes.org[2][1],'px');
+    }
+    .Avatar__image {
+      mask: url("./orga_mask.svg");
+      mask-box-image: url("./orga_mask.svg");
+      display: block;
+      height: 100%;
+    }
+  }
 }
