@@ -17,10 +17,13 @@
     }
 
     [class^="wgf-icon-"] {
-      transition: all 170ms;
-      transform: scale(3);
+      color: $palette.coolBlue;
+      line-height: 0.35em;
+      font-size: 4em;
+      transition: all 170ms ease;
     }
   }
+
   &:after {
     content: '';
     display: block;
@@ -30,25 +33,16 @@
     left: 0;
     background-color: $palette.petrol;
     width: 0;
-    transition: all 170ms;
-  }
-
-  &__text {
-    vertical-align: center;
-  }
-
-  &__text,
-  [class^="wgf-icon-"] {
-    vertical-align: text-top;
+    transition: all 170ms ease-in;
   }
 
   [class^="wgf-icon-"] {
-    display: inline-block;
+    color: $palette.cloudyBlue;
     text-align: right;
     font-size: 1.4em;
-    line-height: inherit;
-    transition: all 210ms;
-    vertical-align: center;
+    line-height: 1em;
+    transform: translate3d(0, 0, 0);
+    transition: all 170ms ease;
     right: 15px;
     position: absolute;
   }
