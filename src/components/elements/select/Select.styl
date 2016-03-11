@@ -1,0 +1,53 @@
+$Select = {
+  color: {
+    text: $palette.white,
+    bg: $palette.coolBlue
+  }
+}
+
+.Select {
+  display: inline-block;
+  position: relative;
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 0;
+    right: 10px;
+    top: 10px;
+    border: 5px solid transparent;
+    border-width: 5px 4px;
+    border-top-color: $palette.white;
+    z-index: 1;
+  }
+
+  &__nativeEl {
+    //Reset
+    border: 0;
+    -webkit-appearance: none;
+    appearance: none;
+
+    // Skin
+    color: $Button.color.text;
+    font-weight: normal;
+    padding: 5px 30px 5px 10px;
+    border-radius: $radius;
+    background-color: $Button.color.bg;
+    box-shadow: 0 $uiThickness 0 darken($Select.color.bg, 20%);
+    outline: 0;
+    margin-bottom: $uiThickness; // Compensation for shadow
+    remFontSize($fontSize.small);
+
+    &::-ms-expand {
+      display: none;
+    }
+
+    .ie9 &,
+    .lt-ie9 & {
+      background-image: none;
+    }
+  }
+
+}
