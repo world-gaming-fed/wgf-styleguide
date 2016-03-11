@@ -60,7 +60,7 @@ var ContentNav = React.createClass({
         <ul className="ContentNav__list">
           { this.props.children.map(function(item, i) {
             return (
-              <li ref={'ContentNavItem' + i} className="ContentNav__list__item" key={ 'ContentNavItem' + i } onClick={this.placeBar.bind(this)}>
+              <li ref={'ContentNavItem' + i} className="ContentNav__list__item" key={ 'ContentNavItem' + i } onClick={this.placeBar}>
                 {item}
               </li>
             );

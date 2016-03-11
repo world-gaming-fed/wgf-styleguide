@@ -1,0 +1,37 @@
+.TabButton {
+  @extend $resetButton;
+
+  font-weight: $font.normal;
+  border-left: 1px solid darken($themes.official.bg, 10%);
+  padding: 8px 13px;
+  color: rgba($themes.official.text, 0.8);
+
+  &:first-child {
+    border-left: 0;
+  }
+
+  &:hover,
+  &.state--active {
+    background: darken($themes.official.bg, 10%);
+  }
+
+  &.state--active {
+    color: $themes.official.text;
+    border-bottom: 4px solid $palette.darkGrey;
+  }
+
+  .th--social & {
+    color: rgba($themes.social.text, 0.8);
+    border-left-color: lighten($themes.social.bg, 10%);
+
+    &:hover,
+    &.state--active {
+      background: lighten($themes.social.bg, 10%);
+    }
+
+    &.state--active {
+      color: $themes.social.text;
+      border-bottom-color: $palette.white;
+    }
+  }
+}
