@@ -9,7 +9,8 @@ export default class extends React.Component {
     description: 'Two themes availables: "social" and "official"',
     code: `
 <div className="th--social">...</div>
-<div className="th--official">...</div>`
+<div className="th--official">...</div>
+<div className="th--official-alt">...</div>`
   }
 
   render () {
@@ -19,6 +20,9 @@ export default class extends React.Component {
           <p>Paragraphe</p>
         </div>
         <div className="demoSpace th--official">
+          <p>Paragraphe</p>
+        </div>
+        <div className="demoSpace th--official--alt">
           <p>Paragraphe</p>
         </div>
       </div>

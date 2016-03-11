@@ -16,6 +16,13 @@ $themes.official = {
   bgColorEnd: #d8d8d8
 }
 
+$themes.official--alt = {
+  text: $palette.petrol,
+  bg: $palette.lightBlueGrey,
+  bgColorStart: #f7f7f7,
+  bgColorEnd: #d8d8d8
+}
+
 for theme, i in $themes {
   .th--{theme} {
     background-color: $themes[theme].bg;
