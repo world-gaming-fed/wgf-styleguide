@@ -10,7 +10,7 @@ var TabButton = React.createClass({
     active: React.PropTypes.bool,
     children: React.PropTypes.string.isRequired
   },
-  componentWillMount: function() {
+  componentDidMount: function() {
     if (this.props.active) {
       this.setState({isActive: true});
     }

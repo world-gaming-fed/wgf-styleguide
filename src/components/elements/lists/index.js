@@ -1,3 +1,4 @@
 module.exports = {
-  ContentNav: require('./contentNav/ContentNav')
+  ContentNav: require('./contentNav/ContentNav'),
+  IconList: require('./iconList/IconList')
 };

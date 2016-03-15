@@ -5,7 +5,7 @@ import SimpleTabPanel from './SimpleTabPanel';
 
 export default class extends React.Component {
   static styleguide = {
-    category: 'Elements',
+    category: 'Blocks',
     title: 'SimpleTabPanel',
     description: 'Label component, initialy created for plateforme label.',
     code: `
@@ -29,6 +29,13 @@ export default class extends React.Component {
           </SimpleTabPanel>
         </div>
         <div className="th--social">
+          <SimpleTabPanel tabs={[ 'Content 1', 'Content 2', 'Content 3' ]}>
+            <div>Content 1</div>
+            <div>Content 2</div>
+            <div>Content 3</div>
+          </SimpleTabPanel>
+        </div>
+        <div className="th--official--hue1">
           <SimpleTabPanel tabs={[ 'Content 1', 'Content 2', 'Content 3' ]}>
             <div>Content 1</div>
             <div>Content 2</div>

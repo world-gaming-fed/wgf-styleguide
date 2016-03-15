@@ -17,7 +17,7 @@
 
   &.state--active {
     color: $themes.official.text;
-    border-bottom: 4px solid $palette.darkGrey;
+    border-bottom: 4px solid $themes.official.text;
   }
 
   .th--social & {
@@ -31,7 +31,22 @@
 
     &.state--active {
       color: $themes.social.text;
-      border-bottom-color: $palette.white;
+      border-bottom-color: $themes.social.text;
+    }
+  }
+
+  .th--official--hue1 & {
+    color: rgba($themes.official--hue1.text, 0.8);
+    border-left-color: darken($themes.official--hue1.bg, 7%);
+
+    &:hover,
+    &.state--active {
+      background: darken($themes.official--hue1.bg, 7%);
+    }
+
+    &.state--active {
+      color: $themes.official--hue1.text;
+      border-bottom-color: $themes.official--hue1.text;
     }
   }
 }
