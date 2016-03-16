@@ -31,8 +31,8 @@ gulp.task('styleguide', ['styleguide-compile'], function() {
   gulp.src('./src/source_mapping/**')
     .pipe(gulp.dest('./dist/files/source_mapping'));
 
-  gulp.src('./src/base/font/wgficons/fonts/**')
-    .pipe(gulp.dest('./dist/assets/fonts'));
+  gulp.src('./src/assets/**')
+    .pipe(gulp.dest('./dist/assets/'));
 
   gulp.src('./src/components/elements/avatar/orga_mask.svg')
     .pipe(gulp.dest('./dist/files'));
