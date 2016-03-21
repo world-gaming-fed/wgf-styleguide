@@ -1,7 +1,7 @@
 'use strict';
 
-import React from 'react';
-import ContentNav from './ContentNav';
+import React from 'react/addons';
+var ContentNav = require('./ContentNav')(React);
 
 export default class extends React.Component {
   static styleguide = {

@@ -25,6 +25,11 @@ export default class extends React.Component {
           <TabButton>All Teams</TabButton>
           <TabButton>All Fans</TabButton>
         </div>
+        <div className="demoSpace th--official--hue1">
+          <TabButton active={true}>All Players</TabButton>
+          <TabButton>All Teams</TabButton>
+          <TabButton>All Fans</TabButton>
+        </div>
       </div>
     );
   }

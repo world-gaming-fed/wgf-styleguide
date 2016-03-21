@@ -10,6 +10,7 @@
 
 .sg-section-example-body {
   font-family: Lato, "sans-serif";
+  font-size: 13px;
 }
 
 .app-body {
@@ -40,6 +41,15 @@
 .sg-icon-list [class^="wgf-icon"] {
   display: block;
   float: left;
+  margin: 10px;
+}
+
+.sg-inline-list {
+  overflow: hidden;
+}
+
+.sg-inline-list > * {
+  float: left !important;
   margin: 10px;
 }
 

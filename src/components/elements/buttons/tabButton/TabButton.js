@@ -10,9 +10,9 @@ var TabButton = React.createClass({
     active: React.PropTypes.bool,
     children: React.PropTypes.string.isRequired
   },
-  componentWillMount: function() {
+  componentDidMount: function() {
     if (this.props.active) {
-      this.setState({isActive: true});
+      this.setState({isActive: true}); // eslint-disable-line react/no-did-mount-set-state
     }
   },
   componentWillReceiveProps: function(newProps) {

@@ -1,12 +1,14 @@
 module.exports = {
   buttons: require('./buttons'),
-  links: require('./links'),
   labels: require('./labels'),
-  MenuLabel: require('./menuLabel/MenuLabel'),
-  Avatar: require('./avatar/Avatar'),
+  links: require('./links'),
+  lists: require('./lists'),
+
   field: require('./field/Field'),
+
+  Avatar: require('./avatar/Avatar'),
   Icon: require('./icon/Icon'),
+  MenuLabel: require('./menuLabel/MenuLabel'),
   Select: require('./select/Select'),
   TableList: require('./tableList/TableList')
-
 };

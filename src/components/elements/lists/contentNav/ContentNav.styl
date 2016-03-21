@@ -4,6 +4,7 @@ $ContentNav = {
 
 .ContentNav {
   position: relative;
+  padding: 0 40px;
   background: linear-gradient(lighten($themes.official.bgColorEnd, 40%) 0%, $themes.official.bgColorEnd 100%);
 
   .th--social & {
@@ -17,10 +18,11 @@ $ContentNav = {
       font-weight: $font.normal;
       text-transform: uppercase;
 
-      a, span {
+      & > a,
+      & > span {
         cursor: pointer;
         display: inline-block;
-        padding: 10px 20px;
+        padding: 15px 20px;
         text-decoration: none;
         opacity: 0.7;
         transition: opacity 170ms linear;
