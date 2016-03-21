@@ -1,7 +1,7 @@
-'use strict'
+'use strict';
 
-import React from 'react'
-import Avatar from './Avatar'
+import React from 'react';
+import Avatar from './Avatar';
 
 export default class extends React.Component {
   static styleguide = {
@@ -51,6 +51,6 @@ export default class extends React.Component {
           <Avatar format="org" size="large" url="https://blog.fr.playstation.com/files/avatars/avatar_128543.jpg" />
         </div>
       </div>
-    )
+    );
   }
 }

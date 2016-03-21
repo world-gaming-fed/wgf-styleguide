@@ -27,8 +27,7 @@ var EventCard = React.createClass({
     var classes = [ {
       EventCard: true,
       'state--labelize': !!label,
-      'state--hasPlusElement': !!this.props.children,
-      'EventCard--small': !!this.props.size
+      'state--hasPlusElement': !!this.props.children
     } ];
 
     if (this.props.size) {

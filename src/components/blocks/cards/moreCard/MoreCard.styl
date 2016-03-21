@@ -1,0 +1,60 @@
+$MoreCard = {
+  colors: {
+    shadow: $palette.black,
+    arrow: rgba($palette.lightBlueGrey, 0.05),
+    number: $palette.lightBlueGrey,
+    label: rgba($palette.lightBlueGrey, 0.5)
+  }
+}
+
+.MoreCard {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  width: 140px;
+  height: 176px;
+  cursor: pointer;
+  box-shadow: 0px 0px 5px $MoreCard.colors.shadow;
+  text-decoration: none;
+  background-color: $palette.darkGrey;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  [class^="wgf-icon-"] {
+    top: 17px;
+    left: -65px;
+    position: absolute;
+    font-size: 240px;
+    line-height: 140px;
+    transition: all 300ms ease;
+    color: $MoreCard.colors.arrow;
+  }
+
+  &--event {
+    width: 220px;
+    height: 140px;
+
+    [class^="wgf-icon-"] {
+      top: 0;
+      left: -25px;
+    }
+  }
+
+  &:hover {
+    [class^="wgf-icon-"] {
+      transform: translateX(10px);
+    }
+  }
+
+  &__number {
+    color: $MoreCard.colors.number;
+    remFontSize(36);
+  }
+
+  &__label {
+    color: $MoreCard.colors.label;
+    remFontSize($fontSize.medium);
+  }
+}
