@@ -1,0 +1,113 @@
+.VideoCard {
+  @extend $abstractCard;
+  width: 220px;
+  height: 124px;
+
+  &:hover {
+    .VideoCard__mask {
+      opacity: 0.3;
+    }
+
+    .VideoCard__title {
+      transform: translateY(0);
+    }
+  }
+
+  &--highlight {
+    width: 460px;
+    height: 268px;
+  }
+
+  &.VideoCard--highlight:hover {
+    .VideoCard__mask {
+      opacity: 0;
+    }
+
+    .VideoCard__play {
+      opacity: 1;
+    }
+  }
+
+  &__cover {
+    width: auto;
+    height: 100%;
+    min-width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  &__play {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 90px;
+    height: @width;
+    margin-left: - (@width / 2);
+    margin-top: - (@height / 2);
+    overflow: hidden;
+    background: rgba($palette.white, .3);
+    border-radius: 50%;
+    text-align: center;
+    font-size: 90px;
+    line-height: 96px;
+    color: $palette.white;
+    display: none;
+
+    .VideoCard--highlight & {
+      display: block;
+      opacity: 0.7;
+    }
+  }
+
+  &__mask,
+  &__title {
+    position: absolute;
+    transition: all 210ms ease;
+  }
+
+  &__mask {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    background-image: radial-gradient(circle at 49% 50%, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.7));
+    background-color: rgba(0, 0, 0, 0.1);
+    opacity: 0;
+
+    .VideoCard--highlight & {
+      opacity: 0.3;
+    }
+  }
+
+  &__title {
+    overflow: hidden;
+    color: white;
+    bottom: 0px;
+    padding: 20px 10px 10px;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+    transform: translateY(100%);
+    width: 100%;
+
+    .VideoCard--highlight & {
+      padding: 30px 10px 10px;
+      transform: translateY(0);
+    }
+
+    .Title {
+      text-shadow: 0 0 3px $palette.black;
+      display: block;
+      font-weight: $font.bold;
+    }
+  }
+
+  &__layer {
+    display: none
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    padding: 20px
+    background: rgba(22, 22, 22, .5);
+  }
+}
