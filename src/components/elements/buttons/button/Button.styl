@@ -1,14 +1,3 @@
-$button {
-  display inline-block
-  background none
-  padding 0
-  margin 0
-  border-width 0
-  text-transform uppercase
-  text-align: center;
-  text-decoration: none;
-}
-
 $Button = {
   color: {
     text: $palette.white,
@@ -17,7 +6,7 @@ $Button = {
 }
 
 .Button {
-  @extend $button
+  @extend $resetButton;
   color: $Button.color.text;
   font-weight: normal;
   padding: 5px 10px;
@@ -76,6 +65,35 @@ $Button = {
     }
   }
 
+  // Push Forward
+  &--pushForward {
+    font-weight: $font.light;
+    remFontSize($fontSize.medium);
+    padding: 16px 27px;
+  }
+
+  &--callToAction {
+    background: linear-gradient(109deg, $palette.orangeRed, $palette.tomatoRed);
+    box-shadow: 0 $uiThickness 0 darken($palette.tomatoRed, 20%), 0 unit($uiThickness + 5, 'px') 5px 0 $palette.darkGrey;
+
+    &:hover,
+    &:focus {
+      background: linear-gradient(109deg, lighten($palette.orangeRed, 10%), lighten($palette.tomatoRed, 10%));
+      box-shadow: 0 $uiThickness 0 darken($palette.tomatoRed, 10%), 0 unit($uiThickness + 5, 'px') 5px 0 $palette.darkGrey;
+    }
+  }
+
+  &--cancel {
+    background: linear-gradient(109deg, lighten($palette.charcoalGrey, 60%), lighten($palette.charcoalGrey, 50%));
+    box-shadow: 0 $uiThickness 0 lighten($palette.charcoalGrey, 40%), 0 unit($uiThickness + 5, 'px') 5px 0 $palette.darkGrey;
+
+    &:hover,
+    &:focus {
+      background: linear-gradient(109deg, lighten($palette.charcoalGrey, 65%), lighten($palette.charcoalGrey, 55%));
+      box-shadow: 0 $uiThickness 0 lighten($palette.charcoalGrey, 45%), 0 unit($uiThickness + 5, 'px') 5px 0 $palette.darkGrey;
+    }
+  }
+
   &:active {
     transform: translateY($uiThickness);
     box-shadow: none;
@@ -83,7 +101,7 @@ $Button = {
 }
 
 .iconButton {
-  @extend $button;
+  @extend $resetButton;
   text-decoration none
   display inline-block
   width 40px
