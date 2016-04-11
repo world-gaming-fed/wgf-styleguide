@@ -14,8 +14,9 @@ export default class extends React.Component {
 
   render () {
     return (
-      <div className="demoSpace th--official">
-        <GameCard name="Game Name" imgURL="/assets/img/no-cover.jpg" />
+      <div className="demoSpace th--official sg-inline-list">
+        <GameCard name="Game Small VII" imgURL="/assets/img/no-cover.jpg" />
+          <GameCard name="Game Large XV" size="large" imgURL="/assets/img/no-cover.jpg" />
       </div>
     );
   }

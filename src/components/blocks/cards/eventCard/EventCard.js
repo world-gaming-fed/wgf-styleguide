@@ -10,6 +10,9 @@ var EventCard = React.createClass({
     name: React.PropTypes.string.isRequired,
     imgURL: React.PropTypes.string,
     label: React.PropTypes.string,
+    /**
+     * size of card in enum : small | (nothing to normal size)
+     */
     size: React.PropTypes.oneOf([ 'small' ])
   },
   buildLabel: function(label) {
@@ -36,9 +39,9 @@ var EventCard = React.createClass({
 
     return (
       <div className={classnames(classes)}>
-        {label}
         <img className="EventCard__cover" src={ this.props.imgURL } />
         <div className="EventCard__mask"></div>
+        {label}
         <div className="EventCard__content">
           <div className="EventCard__content__title"><h2 className="Title">{this.props.name}</h2></div>
         </div>
