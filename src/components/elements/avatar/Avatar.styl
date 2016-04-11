@@ -5,7 +5,7 @@ $Avatar = {
   },
   sizes: {
     user: 30 50 125,
-    org: (35 30) (57 50) (142 125)
+    org: (29 30) (50 50) (127 125)
   }
 }
 
@@ -14,10 +14,11 @@ $Avatar = {
   background-size: 100%;
   width: unit($Avatar.sizes.user[0],'px');
   height: @width;
+  overflow: hidden;
 
   &__image {
     display: block;
-    height: 100%;
+    width: 100%;
   }
 
   &--user {
@@ -45,7 +46,6 @@ $Avatar = {
     width: unit($Avatar.sizes.org[0][0],'px');
     height: unit($Avatar.sizes.org[0][1],'px');
     filter: drop-shadow(0 0 2px $Avatar.colors.boxShadowTOfficial);
-    size:100%;
 
     .th--social & {
       filter: drop-shadow(0 0 4px $Avatar.colors.boxShadowTSocial);
@@ -60,10 +60,9 @@ $Avatar = {
       height: unit($Avatar.sizes.org[2][1],'px');
     }
     .Avatar__image {
-      mask: url("./orga_mask.svg");
-      mask-box-image: url("./orga_mask.svg");
-      display: block;
-      height: 100%;
+      mask: url("/assets/skin/orga_mask.svg");
+      mask-box-image: url("/assets/skin/orga_mask.svg");
+      mask-repeat: no-repeat;
     }
   }
 }
