@@ -8,7 +8,7 @@ var Select = React.createClass({
     /**
     * Only option elements
     */
-    children: React.PropTypes.element,
+    children: React.PropTypes.node,
     /**
     * Placeholder text to build default option
     */
