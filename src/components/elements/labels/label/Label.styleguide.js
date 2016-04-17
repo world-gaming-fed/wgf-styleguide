@@ -20,6 +20,8 @@ export default class extends React.Component {
         <Label>One</Label>
         &nbsp;
         <Label>Wonderswan colors</Label>
+        &nbsp;
+        <Label modifiers="alt">Dreamcast</Label>
       </div>
     );
   }

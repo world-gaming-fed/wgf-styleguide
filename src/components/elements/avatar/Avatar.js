@@ -34,7 +34,7 @@ var Avatar = React.createClass({
       <div {...this.props} className={classnames(classes)}>
         <img className="Avatar__image"
         src={this.props.url}
-        id="wrap-image" />
+        />
       </div>
     );
   }
