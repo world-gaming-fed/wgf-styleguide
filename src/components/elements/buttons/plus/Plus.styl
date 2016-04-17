@@ -1,0 +1,67 @@
+$Plus = {
+  color: {
+    bg: $palette.orangeRed,
+    boxShadow: $palette.tomatoRed,
+    boxShadow2: $palette.darkGrey
+  }
+}
+
+.Plus {
+  display: inline-block;
+  margin: 5px;
+  border: none;
+  border-radius: 50%;
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  color: $palette.white;
+  text-align: center;
+  background-color: $Plus.color.bg;
+  box-shadow: 0 0.02em 5px rgba($Plus.color.boxShadow2, 0.6);
+  transition: all 125ms ease;
+
+  [class^="wgf-icon-"] {
+    display: inline-block;
+    remFontSize(20px, 20px);
+    font-weight: bold;
+    transition: none;
+  }
+
+  // Interactions
+  &:hover,
+  &:focus {
+    background-color: lighten($Plus.color.bg, 20%);
+
+    [class^="wgf-icon-"] {
+      transform: rotate(90deg);
+      transition: all 125ms ease;
+    }
+  }
+
+  &:active {
+    box-shadow: none;
+    transform: scale(0.8);
+  }
+
+  &--main {
+    width: 45px;
+    height: 45px;
+    box-shadow: 0 $uiThickness 0 $Plus.color.boxShadow, 0 unit($uiThickness + 0.02, 'em') 5px rgba($Plus.color.boxShadow2, 0.6);
+
+    [class^="wgf-icon-"] {
+      remFontSize(45px, 45px);
+    }
+
+    &:active {
+      transform: translateY($uiThickness);
+    }
+
+    .th--social & {
+      box-shadow: 0 $uiThickness 0 $Plus.color.boxShadow, 0 unit($uiThickness + 0.02, 'em') 5px #000;
+
+      &:active {
+        box-shadow: none;
+      }
+    }
+  }
+}

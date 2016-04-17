@@ -3,7 +3,7 @@ module.exports = {
     styl: './src/main.styl'
   },
   files: {
-    styl: ['./src/**/**/*.styl', './src/**/*.styl', './src/*.styl'],
+    styl: ['./src/**/**/**/*.styl', './src/**/**/*.styl', './src/**/*.styl', './src/*.styl'],
     js: ['./src/**/*.js']
   }
 };

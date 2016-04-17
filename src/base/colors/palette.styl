@@ -1,0 +1,37 @@
+$palette = {
+  white: #fff,
+  black: #000,
+  coolBlue: #419cba,
+  mutedBlue: #358099,
+  petrol: #004e66,
+  navy: #002642,
+  whiteGrey: #e8e8e8,
+  dustyLavender: #d3d2d3,
+  lightBlueGrey: #e1eef6,
+  cloudyBlue: #b0cbd3,
+  coolGrey: #8a9ea5,
+  gunmetal: #405359,
+  charcoalGrey: #2f3b3f,
+  darkGrey: #112228,
+  mango: #fcbe32,
+  orangeRed: #ff5f2e,
+  tomatoRed: #db3300
+}
+
+$specialePalette = {
+  twitter: #61a6eb,
+  facebook: #3e5891
+}
+
+.demoPalette {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+}
+
+for color, i in $palette {
+  .demoPalette--{color} {
+    background: $palette[color];
+    color: invert($palette[color]);
+  }
+}

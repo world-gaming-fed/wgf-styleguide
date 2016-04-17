@@ -1,0 +1,54 @@
+.MenuLabel {
+  display: block;
+  font-size: $fontSize.medium;
+  font-weight: $font.normal;
+  padding: 15px 20px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  &:hover,
+  .state--active & {
+    background-color: $palette.white;
+    transition: all 170ms;
+
+    &:after {
+      width: 5px;
+    }
+
+    [class^="wgf-icon-"] {
+      opacity: 1;
+      color: $palette.coolBlue;
+      line-height: 0.30em;
+      font-size: 4.5em;
+      right: -5px;
+      transition: all 170ms ease;
+    }
+  }
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background-color: $palette.petrol;
+    width: 0;
+    transition: all 170ms ease-in;
+  }
+
+  [class^="wgf-icon-"] {
+    opacity: .5;
+    color: $palette.cloudyBlue;
+    text-align: right;
+    font-size: 2em;
+    line-height: 0.7em;
+    transform: translate3d(0, 0, 0);
+    transition: all 170ms ease;
+    right: 15px;
+    position: absolute;
+  }
+}

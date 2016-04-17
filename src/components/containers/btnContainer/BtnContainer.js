@@ -13,7 +13,6 @@ var BtnContainer = React.createClass({
   },
 
   render: function() {
-    var additionnalInfos;
     var props = _.clone(this.props);
     var classes = applyClassNameModifier('BtnContainer', this.props.modifiers);
 

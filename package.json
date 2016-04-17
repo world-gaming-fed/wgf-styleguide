@@ -2,7 +2,7 @@
   "name": "wgf-styleguide",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./lib/components/index.js",
   "scripts": {
     "pretest": "node_modules/.bin/gulp lint",
     "test": "node_modules/.bin/gulp build",
@@ -12,12 +12,15 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "babel": "^6.5.2",
     "classnames": "^2.1.5",
     "express": "^4.13.3",
+    "gulp-clean-css": "^2.0.3",
     "lodash": "^3.10.1",
     "react": "^0.13.3",
     "react-router": "^0.13.3",
-    "react-styleguide-generator": "1.1.5"
+    "react-styleguide-generator": "1.1.5",
+    "stylus": "^0.53.0"
   },
   "peerDependencies": {
     "formsy-react": "^0.14.1"

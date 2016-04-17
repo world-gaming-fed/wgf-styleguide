@@ -1,6 +1,5 @@
 var React = require('react');
 var _ = require('lodash');
-var PropTypes = React.PropTypes;
 
 var IfDataExist = React.createClass({
   propTypes: {

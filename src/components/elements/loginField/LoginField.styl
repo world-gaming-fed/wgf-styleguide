@@ -1,0 +1,57 @@
+$LoginField = {
+  colors: {
+    text: rgba($palette.white, 0.6),
+    inputText: $palette.white,
+    border: rgba($palette.white, 0.6)
+  }
+}
+
+.LoginField {
+  border-collapse: collapse;
+  transition: background 270ms ease;
+
+  .formInvalid &.require,
+  .formInvalid &.error {
+    background-color: rgba($palette.orangeRed, 20%);
+  }
+
+  &__label,
+  &__input {
+    border-bottom: 1px solid $LoginField.colors.border;
+    display: table-cell;
+    vertical-align: middle;
+
+    .LoginField:first-child & {
+      border-top: 1px solid $LoginField.colors.border;
+    }
+  }
+
+  &__label {
+    text-align: right;
+    padding: 20px 20px 20px 10px;
+    white-space: nowrap;
+
+    label {
+      remFontSize($fontSize.large);
+      text-transform: uppercase;
+      color: $LoginField.colors.text;
+    }
+  }
+
+  &__input {
+    width: 100%;
+
+    input {
+      outline: none;
+      margin: 0;
+      padding: 10px;
+      display: block;
+      width: 100%;
+      border: none;
+      background: none;
+      font-weight: $font.normal;
+      color: $LoginField.colors.inputText;
+      remFontSize($fontSize.large);
+    }
+  }
+}

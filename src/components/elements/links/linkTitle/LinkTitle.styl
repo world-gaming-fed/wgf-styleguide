@@ -1,0 +1,26 @@
+.LinkTitle {
+  &__link {
+    text-decoration: none;
+    display: inline-block;
+
+    &:hover {
+      transform: translateX(5px);
+    }
+
+    &:hover [class^="wgf-icon-"] {
+      transform: scale(0.6) translateX(-0.1em);
+    }
+  }
+
+  [class^="wgf-icon-"] {
+    display: inline-block;
+    font-size: 1.3em;
+    font-weight: bold;
+  }
+
+  .LinkTitle__link,
+  [class^="wgf-icon-"] {
+    vertical-align: text-top;
+    transition: transform 200ms;
+  }
+}

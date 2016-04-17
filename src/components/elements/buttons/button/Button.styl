@@ -1,0 +1,120 @@
+$Button = {
+  color: {
+    text: $palette.white,
+    bg: $palette.coolBlue
+  }
+}
+
+.Button {
+  @extend $resetButton;
+  color: $Button.color.text;
+  font-weight: normal;
+  padding: 5px 10px;
+  border-radius: 4px;
+  background-color: $Button.color.bg;
+  box-shadow: 0 $uiThickness 0 darken($Button.color.bg, 30%);
+  margin-bottom: $uiThickness; // Compensation for shadow
+  remFontSize($fontSize.small);
+  transition: all 125ms ease;
+
+  &:hover,
+  &:focus {
+    background-color: lighten($Button.color.bg, 10%);
+    box-shadow: 0 $uiThickness 0 darken($Button.color.bg, 20%);
+  }
+
+  [class^="wgf-icon-"] {
+    display: inline-block;
+    margin-right: 5px;
+    font-size: 1.4em;
+    line-height: inherit;
+  }
+
+  &__text,
+  [class^="wgf-icon-"] {
+    vertical-align: text-top;
+  }
+
+  // Modifier full width
+  &--full {
+    display: block;
+    width: 100%;
+  }
+
+  // Twitter version
+  &--twitter {
+    background-color: $specialePalette.twitter;
+    box-shadow: 0 $uiThickness 0 darken($specialePalette.twitter, 30%);
+
+    &:hover,
+    &:focus {
+      background-color: lighten($specialePalette.twitter, 10%);
+      box-shadow: 0 $uiThickness 0 darken($specialePalette.twitter, 20%);
+    }
+  }
+
+  // Facebook version
+  &--facebook {
+    background-color: $specialePalette.facebook;
+    box-shadow: 0 $uiThickness 0 darken($specialePalette.facebook, 30%);
+
+    &:hover,
+    &:focus {
+      background-color: lighten($specialePalette.facebook, 10%);
+      box-shadow: 0 $uiThickness 0 darken($specialePalette.facebook, 20%);
+    }
+  }
+
+  // Push Forward
+  &--pushForward {
+    font-weight: $font.light;
+    remFontSize($fontSize.medium);
+    padding: 16px 27px;
+  }
+
+  &--callToAction {
+    background: linear-gradient(109deg, $palette.orangeRed, $palette.tomatoRed);
+    box-shadow: 0 $uiThickness 0 darken($palette.tomatoRed, 20%), 0 unit($uiThickness + 5, 'px') 5px 0 $palette.darkGrey;
+
+    &:hover,
+    &:focus {
+      background: linear-gradient(109deg, lighten($palette.orangeRed, 10%), lighten($palette.tomatoRed, 10%));
+      box-shadow: 0 $uiThickness 0 darken($palette.tomatoRed, 10%), 0 unit($uiThickness + 5, 'px') 5px 0 $palette.darkGrey;
+    }
+  }
+
+  &--cancel {
+    background: linear-gradient(109deg, lighten($palette.charcoalGrey, 60%), lighten($palette.charcoalGrey, 50%));
+    box-shadow: 0 $uiThickness 0 lighten($palette.charcoalGrey, 40%), 0 unit($uiThickness + 5, 'px') 5px 0 $palette.darkGrey;
+
+    &:hover,
+    &:focus {
+      background: linear-gradient(109deg, lighten($palette.charcoalGrey, 65%), lighten($palette.charcoalGrey, 55%));
+      box-shadow: 0 $uiThickness 0 lighten($palette.charcoalGrey, 45%), 0 unit($uiThickness + 5, 'px') 5px 0 $palette.darkGrey;
+    }
+  }
+
+  &:active {
+    transform: translateY($uiThickness);
+    box-shadow: none;
+  }
+}
+
+.iconButton {
+  @extend $resetButton;
+  text-decoration none
+  display inline-block
+  width 40px
+  height 40px
+  color #fff
+  line-height 40px
+  font-size 20px
+  text-align center
+  border-radius 50%
+  background-color: $Button.color.bg;
+  transition all ease 500ms
+
+  &--alt {
+    background-color #50E3C2;
+  }
+}

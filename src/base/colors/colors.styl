@@ -1,0 +1,53 @@
+@require './palette';
+
+$themes = {};
+
+$themes.social = {
+  text: $palette.white,
+  bg: $palette.darkGrey,
+  bgColorStart: #283f47,
+  bgColorEnd: #0c1215
+}
+
+$themes.social--hue1 = {
+  text: $palette.whiteGrey,
+  bg: $palette.charcoalGrey,
+}
+
+$themes.transvers = {
+  text: $palette.coolGrey,
+  bg: $palette.navy,
+  bgColorStart: $palette.navy,
+  bgColorEnd: $palette.navy
+}
+
+$themes.official = {
+  text: $palette.darkGrey,
+  bg: $palette.whiteGrey,
+  bgColorStart: #f7f7f7,
+  bgColorEnd: #d8d8d8
+}
+
+$themes.official--hue1 = {
+  text: $palette.navy,
+  bg: $palette.lightBlueGrey,
+  bgColorStart: #f7f7f7,
+  bgColorEnd: #d8d8d8
+}
+
+$themes.official--hue2 = {
+  text: $palette.darkGrey,
+  bg: $palette.white
+}
+
+$themes.official--hue3 = {
+  text: $palette.black,
+  bg: $palette.cloudyBlue
+}
+
+for theme, i in $themes {
+  .th--{theme} {
+    background-color: $themes[theme].bg;
+    color: $themes[theme].text;
+  }
+}

@@ -1,0 +1,22 @@
+.IconList {
+  @extend $resetList;
+  margin-bottom: 10px;
+
+  li {
+    position: relative;
+    padding-left: 40px;
+    margin-top: 20px;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  [class^="wgf-icon-"] {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: -5px;
+    font-size: $fontSize.xLarge;
+  }
+}
