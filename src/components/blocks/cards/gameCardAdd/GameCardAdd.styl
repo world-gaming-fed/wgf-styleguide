@@ -1,0 +1,37 @@
+.GameCardAdd {
+  @extend $abstractCard;
+  width: 140px;
+  height: 176px;
+  background: $palette.white;
+  padding: 6px;
+
+  &--large {
+    padding: 11px;
+    width: 210px;
+    height: 264px;
+  }
+
+  &:hover {
+    .GameCardAdd__inner {
+      color: $palette.coolBlue;
+      border-color: $palette.coolBlue;
+    }
+  }
+
+  &__inner {
+    transition: all 230ms ease;
+    width: 100%;
+    height: 100%;
+    border: 2px dashed $palette.dustyLavender;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: $palette.dustyLavender;
+
+    &__icon {
+      font-size: 60px;
+      display: block;
+    }
+  }
+}
