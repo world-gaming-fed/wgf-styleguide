@@ -22,6 +22,16 @@ export default class extends React.Component {
             <div className="LoginField__label"><label htmlFor="password">password</label></div>
             <div className="LoginField__input"><input type="password" id="password"/></div>
           </div>
+          <div className="LoginField">
+            <div className="LoginField__label"><label htmlFor="password">Country</label></div>
+            <div className="LoginField__select">
+              <select>
+                <option>Pick here...</option>
+                <option>test</option>
+                <option>test2</option>
+              </select>
+            </div>
+          </div>
         </div>
       </div>
     );

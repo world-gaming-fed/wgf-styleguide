@@ -25,6 +25,7 @@ var Field = require('wgf-styleguide').element.field(React);
     return (
       <Formsy.Form>
         <Field name="email" label="Email" validateOnLive="true" validations="isEmail" validationError="This is not a valid email"/>
+        <Field name="email" label="Playstation Network ID" validateOnLive="true" validations="isEmail" validationError="This is not a valid email"/>
       </Formsy.Form>
     );
   }

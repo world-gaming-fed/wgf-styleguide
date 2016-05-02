@@ -9,10 +9,10 @@ $Button = {
   @extend $resetButton;
   color: $Button.color.text;
   font-weight: normal;
-  padding: 5px 10px;
+  padding: 6px 10px;
   border-radius: 4px;
   background-color: $Button.color.bg;
-  box-shadow: 0 $uiThickness 0 darken($Button.color.bg, 30%);
+  box-shadow: 0 $uiThickness 0 darken($Button.color.bg, 30%), 0 unit($uiThickness + 5, 'px') 5px 0 $palette.darkGrey;
   margin-bottom: $uiThickness; // Compensation for shadow
   remFontSize($fontSize.small);
   transition: all 125ms ease;
@@ -20,7 +20,7 @@ $Button = {
   &:hover,
   &:focus {
     background-color: lighten($Button.color.bg, 10%);
-    box-shadow: 0 $uiThickness 0 darken($Button.color.bg, 20%);
+    box-shadow: 0 $uiThickness 0 darken($Button.color.bg, 20%), 0 unit($uiThickness + 5, 'px') 5px 0 $palette.darkGrey;
   }
 
   [class^="wgf-icon-"] {
@@ -44,32 +44,40 @@ $Button = {
   // Twitter version
   &--twitter {
     background-color: $specialePalette.twitter;
-    box-shadow: 0 $uiThickness 0 darken($specialePalette.twitter, 30%);
+    box-shadow: 0 $uiThickness 0 darken($specialePalette.twitter, 30%), 0 unit($uiThickness + 5, 'px') 5px 0 $palette.darkGrey;
 
     &:hover,
     &:focus {
       background-color: lighten($specialePalette.twitter, 10%);
-      box-shadow: 0 $uiThickness 0 darken($specialePalette.twitter, 20%);
+      box-shadow: 0 $uiThickness 0 darken($specialePalette.twitter, 20%), 0 unit($uiThickness + 5, 'px') 5px 0 $palette.darkGrey;
     }
   }
 
   // Facebook version
   &--facebook {
     background-color: $specialePalette.facebook;
-    box-shadow: 0 $uiThickness 0 darken($specialePalette.facebook, 30%);
+    box-shadow: 0 $uiThickness 0 darken($specialePalette.facebook, 30%), 0 unit($uiThickness + 5, 'px') 5px 0 $palette.darkGrey;
 
     &:hover,
     &:focus {
       background-color: lighten($specialePalette.facebook, 10%);
-      box-shadow: 0 $uiThickness 0 darken($specialePalette.facebook, 20%);
+      box-shadow: 0 $uiThickness 0 darken($specialePalette.facebook, 20%), 0 unit($uiThickness + 5, 'px') 5px 0 $palette.darkGrey;
     }
   }
 
-  // Push Forward
+  // Push Versions
+  &--push,
   &--pushForward {
     font-weight: $font.light;
     remFontSize($fontSize.medium);
+  }
+
+  &--pushForward {
     padding: 16px 27px;
+  }
+
+  &--push {
+    padding: 10px 15px;
   }
 
   &--callToAction {
@@ -97,6 +105,21 @@ $Button = {
   &:active {
     transform: translateY($uiThickness);
     box-shadow: none;
+  }
+
+  .state--hover {
+    display: none;
+  }
+
+  &:hover,
+  &:focus {
+    .state--default {
+      display: none;
+    }
+
+    .state--hover {
+      display: inline;
+    }
   }
 }
 

@@ -7,6 +7,7 @@ module.exports = function(React) {
     displayName: 'Field',
     propTypes: {
       className: React.PropTypes.string,
+      id: React.PropTypes.string,
       label: React.PropTypes.string.isRequired,
       name: React.PropTypes.string.isRequired,
       onChange: React.PropTypes.func,
@@ -57,8 +58,10 @@ module.exports = function(React) {
 
       return (
         <div className={className}>
-          <label htmlFor={this.props.name}>{this.props.label + (this.isRequired() ? '*' : '')}</label>
-          <input autoComplete="off" name={this.props.name} onChange={this.changeValue} placeholder={this.props.label + (this.isRequired() ? '*' : '')} type={this.props.type || 'text'} value={this.getValue()}/>
+          <div className="Field__field">
+            <label htmlFor={this.props.id}>{this.props.label}</label>
+            <input autoComplete="off" id={this.props.id} name={this.props.name} onChange={this.changeValue} type={this.props.type || 'text'} value={this.getValue()}/>
+          </div>
           <span className="Field__error">{errorMessage}</span>
         </div>
       );

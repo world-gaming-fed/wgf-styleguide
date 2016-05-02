@@ -39,6 +39,8 @@ export default class extends React.Component {
         <p className="sg-icon-list">
           <span className="wgf-icon-twitter" title="twitter"></span>
           <span className="wgf-icon-facebook" title="facebook"></span>
+          <span className="wgf-icon-instagram" title="instagram"></span>
+          <span className="wgf-icon-youtube" title="youtube"></span>
         </p>
       </div>
     );

@@ -1,11 +1,47 @@
 $input-text {
-  border-radius: 4px;
   border: 0;
-  padding: 10px;
+}
+
+$resetInput {
+  border: 0;
+  background: none;
+  font-size: 1em;
 }
 
 .Field {
-  border-bottom: 1px solid $palette.white;
+  &__field {
+    display: flex;
+    line-height: 26px;
+    background: $palette.white;
+    // box-shadow: 0 0 4px #E8E8E8;
+    box-shadow: 0 0 4px $palette.darkGrey;
+    border-radius: 4px;
+    padding-left: 10px;
+
+    .error &,
+    .required & {
+      box-shadow: 0 0 4px $palette.tomatoRed;
+    }
+
+    label {
+      padding-right: 10px;
+      font-style: italic;
+      color: $palette.mutedBlue;
+      white-space: nowrap;
+    }
+
+    input {
+      @extend $resetInput;
+      display: block;
+      flex: auto;
+      width: 100%;
+      height: 26px;
+      font-weight: bold;
+
+      outline: none;
+      color: #333;
+    }
+  }
 
   &__error,
   &__required {
@@ -13,7 +49,7 @@ $input-text {
     opacity: 0;
     transition: opacity 250ms;
     color: $colors.error;
-    padding: 10px 0;
+    padding: 5px 0;
 
     &:before {
       content: '\00a0';
@@ -26,28 +62,6 @@ $input-text {
 
     .withoutValidation & {
       display: none;
-    }
-  }
-
-  label {
-    /*@extend $input-text;
-    text-align: left;
-    color: #333;*/
-  }
-
-  input {
-    @extend $input-text;
-    display: block;
-    width: 100%;
-    height: 40px;
-    box-shadow: 0 4px 0 #E8E8E8;
-    margin-bottom: 4px;
-    outline: none;
-    color: #333;
-
-    .error&,
-    .required& {
-      box-shadow: 0 4px 0 $colors.error;
     }
   }
 }
