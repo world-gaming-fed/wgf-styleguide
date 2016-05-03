@@ -159,5 +159,7 @@ sftp-config.json
 # Project
 dist/
 lib/
+zip/
 src/main.css
 source_mapping/
+*.tar.gz
