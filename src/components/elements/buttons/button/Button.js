@@ -48,8 +48,10 @@ module.exports = function(React) {
       if (this.props.to) {
         return (
           <Link {...this.props} className={classnames(classes)}>
-            {this.renderIcon()}
-            <span className="Button__text">{this.props.children}</span>
+            <span className="Button__inner">
+              {this.renderIcon()}
+              <span className="Button__inner__text">{this.props.children}</span>
+            </span>
           </Link>
         );
       }
@@ -57,16 +59,20 @@ module.exports = function(React) {
       if (this.props.href) {
         return (
           <a {...this.props} className={classnames(classes)}>
-            {this.renderIcon()}
-            <span className="Button__text">{this.props.children}</span>
+            <span className="Button__inner">
+              {this.renderIcon()}
+              <span className="Button__inner__text">{this.props.children}</span>
+            </span>
           </a>
         );
       }
 
       return (
         <button {...this.props} className={classnames(classes)}>
-          {this.renderIcon()}
-          <span className="Button__text">{this.props.children}</span>
+          <span className="Button__inner">
+            {this.renderIcon()}
+            <span className="Button__inner__text">{this.props.children}</span>
+          </span>
         </button>
       );
     }

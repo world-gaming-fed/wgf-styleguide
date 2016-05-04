@@ -18,6 +18,10 @@ export default class extends React.Component {
       <div>
         <BtnContainer>
           <Button className="classTest" icon="arrows_plus">Icon button</Button>
+          <Button className="classTest" icon="arrows_plus">
+            <span className="state--hover">State hover</span>
+            <span className="state--default">State default</span>
+          </Button>
           <Button className="classTest">button</Button>
           <Button className="classTest" href="http://example.com/" title="Title test">link</Button>
           <Button className="classTest" modifier="twitter" icon="twitter">02345</Button>
@@ -52,6 +56,7 @@ export default class extends React.Component {
           <Button className="classTest" modifier="facebook pushForward" icon="facebook">1k like</Button>
           <Button className="classTest" modifier="callToAction pushForward">callToAction</Button>
           <Button className="classTest" modifier="cancel pushForward">cancel</Button>
+          <Button className="classTest" modifier="pushForward full" href="http://example.com/" title="Title test">link</Button>
         </BtnContainer>
       </div>
     );
