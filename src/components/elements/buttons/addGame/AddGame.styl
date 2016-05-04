@@ -1,0 +1,110 @@
+.AddGame {
+  position: relative;
+  display: inline-block;
+  user-select: none;
+
+  .Plus {
+    position: relative;
+  }
+
+  &__buttons {
+    z-index: -1;
+    background: rgba($palette.orangeRed, 80%);
+    position: absolute;
+    width: 200px;
+    height: @width;
+    top: -72px;
+    left: -72px;
+    opacity: 1;
+    overflow: hidden;
+    border-radius: 50%;
+    opacity: 0;
+    transform-origin: 50% 50%;
+    transform: rotate(-180deg) scale(0);
+    transition: all 125ms ease-in;
+
+    &__checkbox {
+      position: absolute;
+      overflow: hidden;
+      width: 40px;
+      height: @width;
+
+      label {
+        display: inline-block;
+        width: 40px;
+        height: @width;
+        overflow: hidden;
+        border-radius: 50%;
+        border: 1px solid $palette.white;
+        cursor: pointer;
+        line-height: 39px;
+        text-align: center;
+      }
+
+      input {
+        position: absolute;
+        left: -30px;
+      }
+
+      input[type="checkbox"]:checked + label {
+        background: $palette.white;
+        color: $palette.orangeRed;
+      }
+
+      &.item-1 {
+        left: unit(100 - 40/2, 'px');
+        top: 15px;
+      }
+
+      &.item-2 {
+        left: unit(146 - 40/2, 'px');
+        top: 34px;
+      }
+
+      &.item-3 {
+        right: 15px;
+        top: unit(100 - 40/2, 'px');
+      }
+
+      &.item-4 {
+        left: unit(146 - 40/2, 'px');
+        bottom: 34px;
+      }
+
+      &.item-5 {
+        left: unit(100 - 40/2, 'px');
+        bottom: 15px;
+      }
+
+      &.item-6 {
+        right: unit(146 - 40/2, 'px');
+        bottom: 34px;
+      }
+
+      &.item-7 {
+        left: 15px;
+        top: unit(100 - 40/2, 'px');
+      }
+
+      &.item-8 {
+        right: unit(146 - 40/2, 'px');
+        top: 34px;
+      }
+
+      &.item-9 {
+        left: unit(100 - 40/2, 'px');
+        top: 15px;
+      }
+    }
+  }
+
+
+  &.state--open {
+    .AddGame__buttons {
+      opacity: 1;
+      z-index: auto;
+      transform: rotate(0) scale(1);
+      transition: all 200ms ease-out;
+    }
+  }
+}
