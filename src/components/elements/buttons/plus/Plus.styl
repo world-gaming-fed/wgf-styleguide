@@ -18,6 +18,7 @@ $Plus = {
   text-align: center;
   background-color: $Plus.color.bg;
   box-shadow: 0 0.02em 5px rgba($Plus.color.boxShadow2, 0.6);
+  outline: 0;
   transition: all 125ms ease;
 
   [class^="wgf-icon-"] {
@@ -32,7 +33,7 @@ $Plus = {
   &:focus {
     background-color: lighten($Plus.color.bg, 20%);
 
-    [class^="wgf-icon-"] {
+    &.Plus--icon-arrows_plus [class^="wgf-icon-"] {
       transform: rotate(90deg);
       transition: all 125ms ease;
     }

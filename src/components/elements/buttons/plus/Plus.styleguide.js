@@ -22,6 +22,7 @@ export default class extends React.Component {
         <div className="demoSpace th--official">
           <Plus />
           <Plus modifier="main"/>
+          <Plus modifier="main" icon="arrows_check"/>
         </div>
       </div>
     );
