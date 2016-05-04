@@ -1,11 +1,11 @@
 {
-  "name": "wgf-styleguide",
-  "version": "1.0.0",
-  "description": "",
+  "name": "@wgf/wgf-styleguide",
+  "version": "1.0.1",
+  "description": "## Work in Styleguide",
   "main": "./lib/components/index.js",
   "scripts": {
-    "pretest": "node_modules/.bin/gulp lint",
-    "test": "node_modules/.bin/gulp build",
+    "pretest": "gulp lint",
+    "test": "gulp build",
     "start": "node server.js"
   },
   "author": "",
@@ -15,6 +15,8 @@
     "classnames": "^2.1.5",
     "express": "^4.13.3",
     "gulp-clean-css": "^2.0.3",
+    "gulp-gzip": "^1.2.0",
+    "gulp-tar": "^1.9.0",
     "lodash": "^3.10.1",
     "react": "^0.13.3",
     "react-router": "^0.13.3",
@@ -34,6 +36,7 @@
     "gulp-autoprefixer": "^2.3.1",
     "gulp-babel": "^5.2.1",
     "gulp-eslint": "^1.0.0",
+    "gulp-gzip": "^1.2.0",
     "gulp-minify-css": "^1.2.1",
     "gulp-nodemon": "^2.0.4",
     "gulp-notify": "^2.2.0",
@@ -41,9 +44,19 @@
     "gulp-postcss": "^6.0.0",
     "gulp-sourcemaps": "^1.5.2",
     "gulp-stylus": "^2.0.6",
+    "gulp-tar": "^1.9.0",
+    "gulp-zip": "^3.2.0",
     "lost": "^6.5.0",
     "react-docgen": "^2.0.0",
     "require-dir": "^0.3.0",
     "run-sequence": "^1.1.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/world-gaming-fed/styleguide.git"
+  },
+  "bugs": {
+    "url": "https://github.com/world-gaming-fed/styleguide/issues"
+  },
+  "homepage": "https://github.com/world-gaming-fed/styleguide#readme"
 }

@@ -22,6 +22,7 @@ gulp.task('build', function(done) {
     'build-react',
     'css-compile',
     'styleguide',
+    'build-zip',
     done
   );
 });
