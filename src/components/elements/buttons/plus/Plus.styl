@@ -7,13 +7,15 @@ $Plus = {
 }
 
 .Plus {
+  position: relative;
   display: inline-block;
   margin: 5px;
   border: none;
   border-radius: 50%;
   padding: 0;
-  width: 20px;
-  height: 20px;
+  width: 21px;
+  height: 21px;
+  line-height: 21px;
   color: $palette.white;
   text-align: center;
   background-color: $Plus.color.bg;
@@ -22,10 +24,19 @@ $Plus = {
   transition: all 125ms ease;
 
   [class^="wgf-icon-"] {
-    display: inline-block;
-    remFontSize(20px, 20px);
+    position: absolute;
+    top: 10px;
+    display: block;
+    width: 100%;
+    remFontSize(21px, 0);
     font-weight: bold;
     transition: none;
+  }
+
+  .Loader {
+    position: absolute;
+    top: 2px;
+    left: 2px;
   }
 
   // Interactions
@@ -33,7 +44,7 @@ $Plus = {
   &:focus {
     background-color: lighten($Plus.color.bg, 20%);
 
-    &.Plus--icon-arrows_plus [class^="wgf-icon-"] {
+    &.state--notLoading.Plus--icon-arrows_plus [class^="wgf-icon-"] {
       transform: rotate(90deg);
       transition: all 125ms ease;
     }
@@ -47,10 +58,17 @@ $Plus = {
   &--main {
     width: 45px;
     height: 45px;
+    line-height: 45px;
     box-shadow: 0 $uiThickness 0 $Plus.color.boxShadow, 0 unit($uiThickness + 0.02, 'em') 5px rgba($Plus.color.boxShadow2, 0.6);
 
     [class^="wgf-icon-"] {
-      remFontSize(45px, 45px);
+      top: 22px;
+      remFontSize(45px, 0);
+    }
+
+    .Loader {
+      margin-top: 3px;
+      margin-left: 2px;
     }
 
     &:active {
