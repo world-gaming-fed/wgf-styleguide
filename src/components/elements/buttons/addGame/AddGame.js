@@ -7,18 +7,17 @@ var AddGame = React.createClass({
   propTypes: {
     buttons: React.PropTypes.array.isRequired,
     model: React.PropTypes.array,
+    loader: React.PropTypes.bool,
     changeHandler: React.PropTypes.func
   },
   getDefaultProps: function() {
     return {
-      buttons: [],
-      model: []
+      buttons: []
     };
   },
   getInitialState: function() {
     return {
-      open: false,
-      model: this.props.model
+      open: false
     };
   },
   toggle: function() {
@@ -27,20 +26,19 @@ var AddGame = React.createClass({
   },
   onInputChange: function(e) {
     var value = e.currentTarget.value;
-    if (_.contains(this.props.model, value)) {
-      _.pull(this.state.model, value);
+    var values = this.props.model;
+    if (_.contains(values, value)) {
+      _.pull(values, value);
     }
     else {
-      this.state.model.push(value);
+      values.push(value);
     }
-
-    this.setState(this.state);
     if (this.props.changeHandler) {
-      this.props.changeHandler(this.state.model);
+      this.props.changeHandler(values);
     }
   },
   isInModel: function(value) {
-    return _.contains(this.state.model, value);
+    return _.contains(this.props.model, value);
   },
   buildButtons: function(buttons) {
     return buttons.map(function(button, i) {
@@ -71,7 +69,7 @@ var AddGame = React.createClass({
         <div className="AddGame__buttons">
           { this.buildButtons(this.props.buttons) }
         </div>
-        <Plus modifier="main" onClick={this.toggle} icon={this.state.model.length ? 'arrows_check' : 'arrows_plus'}/>
+        <Plus loader={this.props.loader} modifier="main" onClick={this.toggle} icon={this.props.model && this.props.model.length ? 'arrows_check' : 'arrows_plus'}/>
       </div>
     );
   }

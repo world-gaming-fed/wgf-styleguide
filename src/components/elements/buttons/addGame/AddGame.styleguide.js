@@ -12,10 +12,6 @@ export default class extends React.Component {
     exampleComponent: AddGame
   }
 
-  tata () {
-    console.log(arguments);
-  }
-
   render () {
     return (
       <div>

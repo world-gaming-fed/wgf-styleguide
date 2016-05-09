@@ -7,6 +7,7 @@ module.exports = {
   field: require('./field/Field'),
 
   Avatar: require('./avatar/Avatar'),
+  Loader: require('./loader/Loader'),
   Icon: require('./icon/Icon'),
   MenuLabel: require('./menuLabel/MenuLabel'),
   Select: require('./select/Select'),

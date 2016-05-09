@@ -222,8 +222,7 @@
     space-before-function-paren:  # require or disallow space before function opening parenthesis (off by default)
       - 0
     array-bracket-spacing: # require or disallow spaces inside brackets (off by default)
-      - 2
-      - always
+      - 0
     space-in-parens: # require or disallow spaces inside parentheses (off by default)
       - 1
       - never
