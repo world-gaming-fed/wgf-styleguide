@@ -11,6 +11,10 @@ var IconList = React.createClass({
   buildItem: function(item, index) {
     var icon = null;
 
+    if (!item) {
+      return null;
+    }
+
     if (item.props && item.props.icon) {
       icon = (<Icon>{item.props.icon}</Icon>);
     }

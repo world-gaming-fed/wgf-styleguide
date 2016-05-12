@@ -9,6 +9,7 @@ var EventCard = React.createClass({
     children: React.PropTypes.element,
     name: React.PropTypes.string.isRequired,
     imgURL: React.PropTypes.string,
+    imgURL2x: React.PropTypes.string,
     label: React.PropTypes.string,
     /**
      * size of card in enum : small | (nothing to normal size)
@@ -26,6 +27,7 @@ var EventCard = React.createClass({
   },
   render: function() {
     var label = this.buildLabel(this.props.label);
+    var img = (<img className="EventCard__cover" src={ this.props.imgURL } />);
 
     var classes = [ {
       EventCard: true,
@@ -37,9 +39,13 @@ var EventCard = React.createClass({
       classes.push('EventCard--' + this.props.size);
     }
 
+    if (this.props.imgURL2x) {
+      img = (<img className="EventCard__cover" src={ this.props.imgURL } srcSet={ this.props.imgURL2x + ' 2x' } />);
+    }
+
     return (
       <div className={classnames(classes)}>
-        <img className="EventCard__cover" src={ this.props.imgURL } />
+        {img}
         <div className="EventCard__mask"></div>
         {label}
         <div className="EventCard__content">
