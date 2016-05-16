@@ -43,12 +43,13 @@ $Avatar = {
   }
 
   &--org {
-    width: unit($Avatar.sizes.org[0][0],'px');
-    height: unit($Avatar.sizes.org[0][1],'px');
+    padding: 2px;
+    width: unit($Avatar.sizes.org[0][0] + 4,'px');
+    height: unit($Avatar.sizes.org[0][1] + 4,'px');
     filter: drop-shadow(0 0 2px $Avatar.colors.boxShadowTOfficial);
 
     .th--social & {
-      filter: drop-shadow(0 0 4px $Avatar.colors.boxShadowTSocial);
+      filter: drop-shadow(0 0 2px $Avatar.colors.boxShadowTSocial);
     }
 
     &.Avatar--medium {
