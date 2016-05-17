@@ -27,7 +27,7 @@ var EventCard = React.createClass({
   },
   render: function() {
     var label = this.buildLabel(this.props.label);
-    var img = (<img className="EventCard__cover" src={ this.props.imgURL } />);
+    var cover2x = null;
 
     var classes = [ {
       EventCard: true,
@@ -40,12 +40,13 @@ var EventCard = React.createClass({
     }
 
     if (this.props.imgURL2x) {
-      img = (<img className="EventCard__cover" src={ this.props.imgURL } srcSet={ this.props.imgURL2x + ' 2x' } />);
+      cover2x = (<div className="EventCard__cover" style={{backgroundImage: '-webkit-image-set(url("' + this.props.imgURL + '") 1x, url("' + this.props.imgURL2x + '") 2x)'}}></div>);
     }
 
     return (
       <div className={classnames(classes)}>
-        {img}
+        <div className="EventCard__cover" style={{backgroundImage: 'url(' + this.props.imgURL + ')'}}></div>
+        {cover2x}
         <div className="EventCard__mask"></div>
         {label}
         <div className="EventCard__content">
