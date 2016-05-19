@@ -25,7 +25,7 @@ export default class extends React.Component {
           <ContentNav>
             <span>Dashboard</span>
             <span>Events</span>
-            <span>Players</span>
+            <span className="active">Players</span>
           </ContentNav>
         </div>
         <br/>
