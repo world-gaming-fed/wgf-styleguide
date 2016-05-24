@@ -4,7 +4,14 @@ var classnames = require('classnames');
 var Avatar = React.createClass({
   displayName: 'Avatar',
   propTypes: {
+    /**
+     * image url
+     */
     url: React.PropTypes.string.isRequired,
+    /**
+     * image url 2x
+     */
+    url2x: React.PropTypes.string,
     /**
      * Enum: `user|org`, Default: `user`
      */
@@ -13,6 +20,20 @@ var Avatar = React.createClass({
      * Enum: `small|medium|large`, Default: `small`
      */
     size: React.PropTypes.oneOf([ 'small', 'medium', 'large' ])
+  },
+
+  renderImg: function() {
+    var img = (
+      <img className="Avatar__image" src={this.props.url} />
+    );
+
+    if (this.props.url2x) {
+      img = (
+        <img className="Avatar__image" src={this.props.url} srcSet={this.props.url2x + ' 2x'} />
+      );
+    }
+
+    return img;
   },
 
   render: function() {
@@ -32,9 +53,7 @@ var Avatar = React.createClass({
 
     return (
       <div {...this.props} className={classnames(classes)}>
-        <img className="Avatar__image"
-        src={this.props.url}
-        />
+        { this.renderImg() }
       </div>
     );
   }
