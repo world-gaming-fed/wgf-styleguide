@@ -26,6 +26,7 @@ export default class extends React.Component {
           <Button className="classTest" href="http://example.com/" title="Title test">link</Button>
           <Button className="classTest" modifier="twitter" icon="twitter">02345</Button>
           <Button className="classTest" modifier="facebook" icon="facebook">1k like</Button>
+          <Button className="classTest" modifier="youtube" icon="youtube">1k like</Button>
           <Button className="classTest" modifier="callToAction">callToAction</Button>
           <Button className="classTest" modifier="cancel">cancel</Button>
         </BtnContainer>
@@ -40,6 +41,7 @@ export default class extends React.Component {
           <Button className="classTest" modifier="push" href="http://example.com/" title="Title test">link</Button>
           <Button className="classTest" modifier="twitter push" icon="twitter">02345</Button>
           <Button className="classTest" modifier="facebook push" icon="facebook">1k like</Button>
+          <Button className="classTest" modifier="youtube push" icon="youtube">1k like</Button>
           <Button className="classTest" modifier="callToAction push">callToAction</Button>
           <Button className="classTest" modifier="cancel push">cancel</Button>
         </BtnContainer>
@@ -54,6 +56,7 @@ export default class extends React.Component {
           <Button className="classTest" modifier="pushForward" href="http://example.com/" title="Title test">link</Button>
           <Button className="classTest" modifier="twitter pushForward" icon="twitter">02345</Button>
           <Button className="classTest" modifier="facebook pushForward" icon="facebook">1k like</Button>
+          <Button className="classTest" modifier="youtube pushForward" icon="youtube">1k like</Button>
           <Button className="classTest" modifier="callToAction pushForward">callToAction</Button>
           <Button className="classTest" modifier="cancel pushForward">cancel</Button>
           <Button className="classTest" modifier="pushForward full" href="http://example.com/" title="Title test">link</Button>

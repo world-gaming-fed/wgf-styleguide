@@ -82,6 +82,21 @@ $Button = {
     }
   }
 
+  // Youtube version
+  &--youtube {
+    .Button__inner {
+      background-color: $specialePalette.youtube;
+      box-shadow: 0 $uiThickness 0 darken($specialePalette.youtube, 30%), 0 unit($uiThickness + 5, 'px') 5px 0 $palette.darkGrey;
+    }
+    &:hover,
+    &:focus {
+      .Button__inner {
+        background-color: lighten($specialePalette.youtube, 10%);
+        box-shadow: 0 $uiThickness 0 darken($specialePalette.youtube, 20%), 0 unit($uiThickness + 5, 'px') 5px 0 $palette.darkGrey;
+      }
+    }
+  }
+
   // Push Versions
   &--push,
   &--pushForward {
