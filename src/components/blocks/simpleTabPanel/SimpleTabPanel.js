@@ -8,7 +8,7 @@ var TabButton = require('../../elements/buttons/tabButton/TabButton');
 var SimpleTabPanel = React.createClass({
   displayName: 'SimpleTabPanel',
   propTypes: {
-    children: React.PropTypes.string.isRequired,
+    children: React.PropTypes.node.isRequired,
     tabs: React.PropTypes.array.isRequired
   },
   getInitialState: function() {

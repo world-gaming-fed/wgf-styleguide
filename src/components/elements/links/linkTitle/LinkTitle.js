@@ -7,7 +7,7 @@ var LinkTitle = React.createClass({
   displayName: 'LinkTitle',
 
   propTypes: {
-    children: React.PropTypes.element,
+    children: React.PropTypes.node,
     /**
      * Define heading level h1-h6
      */

@@ -10,7 +10,7 @@ var ContentPak = React.createClass({
      * Theme `official(default)|social`
      */
     theme: React.PropTypes.oneOf([ 'social', 'official' ]),
-    children: React.PropTypes.string.isRequired
+    children: React.PropTypes.node.isRequired
   },
   render: function() {
     var classes = [ 'ContentPak' ];

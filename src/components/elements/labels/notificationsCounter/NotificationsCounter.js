@@ -8,7 +8,7 @@ var NotificationsCounter = React.createClass({
     /**
      * Number to show
      */
-    children: React.PropTypes.string.isRequired
+    children: React.PropTypes.string
   },
   render: function() {
     if (!this.props.children) {

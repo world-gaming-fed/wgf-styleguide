@@ -10,7 +10,7 @@ var MoreCard = React.createClass({
     /**
      * Passe the number here
      */
-    children: React.PropTypes.string,
+    children: React.PropTypes.node,
     label: React.PropTypes.string,
     /**
      * Type of card `game|event`, Default: `game`

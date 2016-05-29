@@ -8,6 +8,9 @@ var EventCard = React.createClass({
   propTypes: {
     children: React.PropTypes.element,
     name: React.PropTypes.string.isRequired,
+    /**
+     * add icon to indicate online or offline state
+     */
     isOnline: React.PropTypes.bool,
     date: React.PropTypes.string,
     imgURL: React.PropTypes.string,
@@ -41,12 +44,12 @@ var EventCard = React.createClass({
 
     if (this.props.isOnline === true) {
       isOnlineRdr = (
-        <span className="wgf-icon-basic_geolocalize_full EventCard__online"></span>
+        <span className="wgf-icon-basic_world_full EventCard__online"></span>
       );
     }
     else if (this.props.isOnline === false) {
       isOnlineRdr = (
-        <span className="wgf-icon-basic_world_full EventCard__online"></span>
+        <span className="wgf-icon-basic_geolocalize_full EventCard__online"></span>
       );
     }
 
