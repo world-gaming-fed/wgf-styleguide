@@ -43,11 +43,13 @@ var EventCard = React.createClass({
       isOnlineRdr = (
         <span className="wgf-icon-basic_geolocalize_full EventCard__online"></span>
       );
-    } else {
+    }
+    else if (this.props.isOnline === false) {
       isOnlineRdr = (
         <span className="wgf-icon-basic_world_full EventCard__online"></span>
       );
     }
+
     if (this.props.size) {
       classes.push('EventCard--' + this.props.size);
     }
