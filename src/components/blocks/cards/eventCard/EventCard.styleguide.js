@@ -26,9 +26,9 @@ export default class extends React.Component {
       <div className="demoSpace th--official">
         <div className="sg-inline-list">
           <EventCard size="small" label="Live" name="Event de la mort qui tue avec un titre bien trop long!" imgURL="/assets/img/no-cover.jpg" />
-          <EventCard size="small" date="MAY, 26 2016 - 1:30 PM" isOnline={true} name="Event de la mort qui tue!" imgURL="/assets/img/no-cover.jpg" />
-          <EventCard size="small" date="MAY, 26 2016 - 1:30 PM" isOnline={false} name="Event de la mort qui tue avec un titre bien trop long!" imgURL="/assets/img/no-cover.jpg" />
           <EventCard size="small" name="Event de la mort qui tue avec un titre bien trop long!" imgURL="/assets/img/no-cover.jpg" />
+            <EventCard size="small" date="MAY, 26 2016 - 1:30 PM" isOnline={true} name="Event online" imgURL="/assets/img/no-cover.jpg" />
+            <EventCard size="small" date="MAY, 26 2016 - 1:30 PM" isOnline={false} name="Event offline" imgURL="/assets/img/no-cover.jpg" />
         </div>
         <div className="sg-inline-list">
           <EventCard name="Event de la mort qui tue!" imgURL="/assets/img/no-cover.jpg">

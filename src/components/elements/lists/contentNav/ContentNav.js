@@ -8,7 +8,7 @@ var ContentNav = function(React) {
   return React.createClass({
     displayName: 'ContentNav',
     propTypes: {
-      children: React.PropTypes.element
+      children: React.PropTypes.node
     },
     getInitialState: function() {
       return {

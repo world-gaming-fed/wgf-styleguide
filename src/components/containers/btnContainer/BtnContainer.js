@@ -5,7 +5,7 @@ var applyClassNameModifier = require('../../../utils/applyClassNameModifier');
 var BtnContainer = React.createClass({
   displayName: 'BtnContainer',
   propTypes: {
-    children: React.PropTypes.element,
+    children: React.PropTypes.node,
     /**
      * `['full']` Change container mode
      */
