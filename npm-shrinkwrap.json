@@ -1,6 +1,6 @@
 {
   "name": "wgf-styleguide",
-  "version": "1.0.2-9",
+  "version": "1.1.0",
   "dependencies": {
     "babel": {
       "version": "6.5.2",
