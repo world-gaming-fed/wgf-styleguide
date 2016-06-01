@@ -1,6 +1,12 @@
 .ContentPak {
   background: none;
   height: 100px;
+  position: relative;
+
+  +mq('small') {
+    height: auto;
+    width: 100%;
+  }
 
   &__ctn {
     height: 100px;
@@ -10,11 +16,23 @@
     transform: skew(25deg);
     transform-origin: left bottom;
 
+    +mq('small') {
+      display: block;
+      height: auto;
+      transform: none;
+      padding: 10px 20px;
+    }
+
     &__inner {
       height: 100%;
       transform: skew(-25deg);
       display: flex;
       align-items: center;
+
+      +mq('small') {
+        display: block;
+        transform: none;
+      }
     }
 
     .th--social & {
@@ -29,16 +47,32 @@
     height: auto;
     margin-right: 40px;
     align-self: flex-end;
+
+    +mq('small') {
+      display: block;
+      max-width: 160px;
+      margin: 0 auto;
+    }
   }
 
   .Cover {
     bottom: -10px;
+
+    +mq('small') {
+      bottom: 0;
+      margin-top: -160px;
+      margin-bottom: 20px;
+    }
   }
 
   .Avatar--org {
     bottom: 10px;
     margin-right: 20px;
     margin-left: -10px;
+
+    +mq('small') {
+      margin-top: -80px;
+    }
   }
 
 
@@ -50,5 +84,12 @@
     display: block;
     position: relative;
     left: 20px;
+
+    +mq('small') {
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      margin-left: -25px;
+    }
   }
 }

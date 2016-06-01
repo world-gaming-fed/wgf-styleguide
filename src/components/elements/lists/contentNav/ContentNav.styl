@@ -8,6 +8,10 @@ $ContentNav = {
   padding: 0 40px;
   background: linear-gradient(lighten($themes.official.bgColorEnd, 40%) 0%, $themes.official.bgColorEnd 100%);
 
+  +mq('small') {
+    padding: 0;
+  }
+
   .th--social & {
     color: $palette.white;
     background: linear-gradient(darken($themes.social.bgColorStart, 50%) 0%, $themes.social.bgColorEnd 100%);
