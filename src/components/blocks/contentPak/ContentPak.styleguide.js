@@ -32,7 +32,9 @@ export default class extends React.Component {
             <h1 className="Title Title--head">Pro evolution soccer 2016</h1>
             <p>#pes #soccer</p>
           </div>
-          <Plus modifier="main"/>
+          <div className="AddGame">
+            <Plus modifier="main"/>
+          </div>
         </ContentPak>
         <br/>
         <br/>
@@ -49,7 +51,9 @@ export default class extends React.Component {
             <h1 className="Title Title--head">Pro evolution soccer 2016</h1>
             <p>#pes #soccer</p>
           </div>
-          <Plus modifier="main"/>
+          <div className="AddGame">
+            <Plus modifier="main"/>
+          </div>
         </ContentPak>
       </div>
     );
