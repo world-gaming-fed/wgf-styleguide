@@ -12,7 +12,8 @@ var AddGame = React.createClass({
   },
   getDefaultProps: function() {
     return {
-      buttons: []
+      buttons: [],
+      model: []
     };
   },
   getInitialState: function() {
