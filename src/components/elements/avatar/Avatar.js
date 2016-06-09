@@ -19,7 +19,7 @@ var Avatar = React.createClass({
     /**
      * Enum: `small|medium|large`, Default: `small`
      */
-    size: React.PropTypes.oneOf([ 'small', 'medium', 'large' ])
+    size: React.PropTypes.oneOf([ 'small', 'medium', 'large', 'x-large' ])
   },
 
   renderImg: function() {

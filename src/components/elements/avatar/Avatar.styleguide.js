@@ -29,6 +29,8 @@ export default class extends React.Component {
           <Avatar size="medium" url="https://blog.fr.playstation.com/files/avatars/avatar_128543.jpg" />
           &nbsp; &nbsp;
           <Avatar size="large" url="https://blog.fr.playstation.com/files/avatars/avatar_128543.jpg" />
+          &nbsp; &nbsp;
+          <Avatar size="x-large" url="https://blog.fr.playstation.com/files/avatars/avatar_128543.jpg" />
           &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
           <Avatar format="org" url="https://blog.fr.playstation.com/files/avatars/avatar_128543.jpg" />
           &nbsp; &nbsp;
