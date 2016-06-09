@@ -4,8 +4,8 @@ $Avatar = {
     boxShadowTSocial: $palette.black
   },
   sizes: {
-    user: 30 50 125,
-    org: (29 30) (50 50) (127 125)
+    user: 30 50 126 200,
+    org: (29 30) (50 50) (127 126)
   }
 }
 
@@ -38,6 +38,10 @@ $Avatar = {
     }
     &.Avatar--large {
       width: unit($Avatar.sizes.user[2],'px');
+      height: @width;
+    }
+    &.Avatar--x-large {
+      width: unit($Avatar.sizes.user[3],'px');
       height: @width;
     }
   }
