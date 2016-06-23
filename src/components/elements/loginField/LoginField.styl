@@ -50,6 +50,8 @@ $LoginField = {
   }
 
   &__input {
+    position: relative;
+
     input {
       outline: none;
       margin: 0;
@@ -99,5 +101,13 @@ $LoginField = {
         background: rgba($palette.navy, .5);
       }
     }
+  }
+
+  &__error {
+  position: absolute;
+  bottom: 5px;
+  left: 10px;
+  color: rgba(255, 255, 255, .6);
+  font-style: italic;
   }
 }
