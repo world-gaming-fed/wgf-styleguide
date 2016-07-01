@@ -8,7 +8,7 @@
       opacity: 0.3;
     }
 
-    .VideoCard__title {
+    .VideoCard__text {
       transform: translateY(0);
     }
   }
@@ -61,7 +61,7 @@
   }
 
   &__mask,
-  &__title {
+  &__text {
     position: absolute;
     transition: all 210ms ease;
   }
@@ -79,7 +79,7 @@
     }
   }
 
-  &__title {
+  &__text {
     overflow: hidden;
     color: white;
     bottom: 0px;
@@ -97,6 +97,17 @@
       text-shadow: 0 0 3px $palette.black;
       display: block;
       font-weight: $font.bold;
+      margin-bottom: 5px;
+    }
+
+    &__viewers {
+      [class^='wgf-icon'] {
+        display: inline-block;
+        text-align: center;
+        margin-right: 10px;
+        font-size: $fontSize.medium;
+        vertical-align: text-bottom;
+      }
     }
   }
 
