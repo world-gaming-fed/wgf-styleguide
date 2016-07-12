@@ -9,11 +9,9 @@
   text-transform: uppercase;
   cursor: pointer;
 
-  &:hover,
-  .state--active & {
+  &:hover {
     background-color: $palette.white;
     transition: all 170ms;
-
     &:after {
       width: 5px;
     }
@@ -21,6 +19,23 @@
     [class^="wgf-icon-"] {
       opacity: 1;
       color: $palette.coolBlue;
+      line-height: 0.30em;
+      font-size: 4.5em;
+      right: -5px;
+      transition: all 170ms ease;
+    }
+  }
+
+  .state--active & {
+    background-color: $palette.petrol;
+    color: $palette.white;
+    transition: all 170ms;
+    &:after {
+      width: 5px;
+    }
+    [class^="wgf-icon-"] {
+      opacity: 1;
+      color: $palette.cloudyBlue;
       line-height: 0.30em;
       font-size: 4.5em;
       right: -5px;
