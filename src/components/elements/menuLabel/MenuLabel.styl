@@ -11,20 +11,27 @@
 
   &:hover,
   .state--active & {
-    background-color: $palette.white;
     transition: all 170ms;
-
-    &:after {
-      width: 5px;
-    }
 
     [class^="wgf-icon-"] {
       opacity: 1;
       color: $palette.coolBlue;
       line-height: 0.30em;
       font-size: 4.5em;
-      right: -5px;
       transition: all 170ms ease;
+    }
+  }
+
+  &:hover {
+    background-color: $palette.white;
+  }
+
+  .state--active & {
+    background-color: $palette.petrol;
+    color: $palette.white;
+
+    [class^="wgf-icon-"] {
+      color: $palette.cloudyBlue;
     }
   }
 
@@ -40,6 +47,18 @@
     transition: all 170ms ease-in;
   }
 
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color: $palette.petrol;
+    width: 0;
+    transition: all 170ms ease-in;
+  }
+
   [class^="wgf-icon-"] {
     opacity: .5;
     color: $palette.cloudyBlue;
@@ -48,7 +67,44 @@
     line-height: 0.7em;
     transform: translate3d(0, 0, 0);
     transition: all 170ms ease;
-    right: 15px;
     position: absolute;
+  }
+
+  &--left {
+    text-align: left;
+
+    &:hover,
+    .state--active & {
+      &:after {
+        width: 5px;
+      }
+
+      [class^="wgf-icon-"] {
+        right: -5px;
+      }
+    }
+
+    [class^="wgf-icon-"] {
+      right: 15px;
+    }
+  }
+
+  &--right {
+    text-align: right;
+
+    &:hover,
+    .state--active & {
+      &:before {
+        width: 5px;
+      }
+
+      [class^="wgf-icon-"] {
+        left: -5px;
+      }
+    }
+
+    [class^="wgf-icon-"] {
+      left: 15px;
+    }
   }
 }

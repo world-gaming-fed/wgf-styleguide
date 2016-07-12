@@ -30,6 +30,17 @@ export default class extends React.Component {
         <MenuLabel theme="official" icon="loupe">
           <span>PLAYERS</span>
         </MenuLabel>
+        <MenuLabel theme="official--alt" icon="loupe" mirror={true}>
+          <span>HOMEPAGE</span>
+        </MenuLabel>
+        <div className="state--active">
+          <MenuLabel theme="official" icon="loupe" mirror={true}>
+            <span>PLAYERS</span>
+          </MenuLabel>
+        </div>
+        <MenuLabel theme="official" icon="loupe" mirror={true}>
+          <span>GAMES</span>
+        </MenuLabel>
       </div>
     );
   }
