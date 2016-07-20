@@ -19,11 +19,21 @@ var MenuLabel = React.createClass({
     /**
      * Define icon to use
      */
-    icon: PropTypes.string
+    icon: PropTypes.string,
+    /**
+    * Define mirror style
+    */
+    mirror: PropTypes.bool
   },
 
   render: function() {
     var classes = [ 'MenuLabel' ];
+    if (this.props.mirror) {
+      classes.push('MenuLabel--right');
+    }
+    else {
+      classes.push('MenuLabel--left');
+    }
     if (this.props.theme) {
       classes.push(' th--' + this.props.theme);
     }
