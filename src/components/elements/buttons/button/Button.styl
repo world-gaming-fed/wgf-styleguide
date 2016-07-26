@@ -10,6 +10,9 @@ $Button = {
   padding: 5px;
   cursor: pointer;
   display: inline-block;
+  opacity: 1;
+  transition: all 170ms ease;
+  position: relative;
 
   &__inner {
     display: inline-block;
@@ -36,7 +39,16 @@ $Button = {
     }
   }
 
-  &:hover,
+  &__clickZone {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  &:hover:not([disabled]),
   &:focus {
     .Button__inner {
       background-color: lighten($Button.color.bg, 10%);
@@ -58,7 +70,7 @@ $Button = {
       background-color: $specialePalette.twitter;
       box-shadow: 0 $uiThickness 0 darken($specialePalette.twitter, 30%), 0 unit($uiThickness + 5, 'px') 5px 0 $palette.darkGrey;
     }
-    &:hover,
+    &:hover:not([disabled]),
     &:focus {
       .Button__inner {
         background-color: lighten($specialePalette.twitter, 10%);
@@ -73,7 +85,7 @@ $Button = {
       background-color: $specialePalette.facebook;
       box-shadow: 0 $uiThickness 0 darken($specialePalette.facebook, 30%), 0 unit($uiThickness + 5, 'px') 5px 0 $palette.darkGrey;
     }
-    &:hover,
+    &:hover:not([disabled]),
     &:focus {
       .Button__inner {
         background-color: lighten($specialePalette.facebook, 10%);
@@ -88,7 +100,7 @@ $Button = {
       background-color: $specialePalette.youtube;
       box-shadow: 0 $uiThickness 0 darken($specialePalette.youtube, 30%), 0 unit($uiThickness + 5, 'px') 5px 0 $palette.darkGrey;
     }
-    &:hover,
+    &:hover:not([disabled]),
     &:focus {
       .Button__inner {
         background-color: lighten($specialePalette.youtube, 10%);
@@ -120,7 +132,7 @@ $Button = {
       background: linear-gradient(109deg, $palette.orangeRed, $palette.tomatoRed);
       box-shadow: 0 $uiThickness 0 darken($palette.tomatoRed, 20%), 0 unit($uiThickness + 5, 'px') 5px 0 $palette.darkGrey;
     }
-    &:hover,
+    &:hover:not([disabled]),
     &:focus {
       .Button__inner {
         background: linear-gradient(109deg, lighten($palette.orangeRed, 10%), lighten($palette.tomatoRed, 10%));
@@ -135,7 +147,7 @@ $Button = {
       background: linear-gradient(109deg, lighten($palette.charcoalGrey, 60%), lighten($palette.charcoalGrey, 50%));
       box-shadow: 0 $uiThickness 0 lighten($palette.charcoalGrey, 40%), 0 unit($uiThickness + 5, 'px') 5px 0 $palette.darkGrey;
     }
-    &:hover,
+    &:hover:not([disabled]),
     &:focus {
       .Button__inner {
         background: linear-gradient(109deg, lighten($palette.charcoalGrey, 65%), lighten($palette.charcoalGrey, 55%));
@@ -144,11 +156,15 @@ $Button = {
     }
   }
 
-  &:active {
+  &:active:not([disabled]) {
     .Button__inner {
       transform: translateY($uiThickness);
       box-shadow: none;
     }
+  }
+
+  &[disabled] {
+    opacity: .4;
   }
 
   .state--hover {

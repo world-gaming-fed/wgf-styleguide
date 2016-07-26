@@ -73,6 +73,7 @@ module.exports = function(React) {
             {this.renderIcon()}
             <span className="Button__inner__text">{this.props.children}</span>
           </span>
+          <span className="Button__clickZone"/>
         </button>
       );
     }
