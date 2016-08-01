@@ -1,9 +1,10 @@
 'use strict';
 
 var classnames = require('classnames');
+var update = require('react-addons-update');
+var ReactDOM = require('react-dom');
 
 var ContentNav = function(React) {
-  var update = React.addons.update;
 
   return React.createClass({
     displayName: 'ContentNav',
@@ -18,14 +19,14 @@ var ContentNav = function(React) {
       };
     },
     componentDidMount: function() {
-      this.placeBar(null, React.findDOMNode(this.refs[this.findActiveRef()]));
+      this.placeBar(null, ReactDOM.findDOMNode(this.refs[this.findActiveRef()]));
       setTimeout(function() {
         this.setAsMounted();
       }.bind(this));
     },
 
     componentDidUpdate: function() {
-      this.placeBar(null, React.findDOMNode(this.refs[this.findActiveRef()]));
+      this.placeBar(null, ReactDOM.findDOMNode(this.refs[this.findActiveRef()]));
     },
 
     getRef: function(element) {
@@ -39,7 +40,7 @@ var ContentNav = function(React) {
 
     findActiveRef: function() {
       var ref = 'ContentNavItem0';
-      var activeRef = React.findDOMNode(this.refs.ContentNav).querySelectorAll('.active');
+      var activeRef = ReactDOM.findDOMNode(this.refs.ContentNav).querySelectorAll('.active');
 
       if (activeRef.length) {
         ref = this.getRef(activeRef[0].parentNode);
@@ -53,10 +54,10 @@ var ContentNav = function(React) {
       var newRef = this.getRef(element);
 
       if (event && event.currentTarget) {
-        el = React.findDOMNode(event.currentTarget);
+        el = ReactDOM.findDOMNode(event.currentTarget);
       }
       else {
-        el = React.findDOMNode(element);
+        el = ReactDOM.findDOMNode(element);
       }
 
       if (newRef !== this.state.activeRef) {

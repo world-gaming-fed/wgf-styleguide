@@ -1,6 +1,6 @@
 'use strict';
 
-import React from 'react/addons';
+import React from 'react';
 var ContentNav = require('./ContentNav')(React);
 
 export default class extends React.Component {

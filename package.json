@@ -11,15 +11,17 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "babel": "^6.5.2",
+    "babelify": "^6.3.0",
     "classnames": "^2.1.5",
     "express": "^4.13.3",
     "lodash": "^3.10.1",
-    "react": "^0.13.3",
+    "react": "^0.14.8",
+    "react-addons-update": "^0.14.8",
+    "react-dom": "^0.14.8",
     "react-router": "^0.13.3"
   },
   "peerDependencies": {
-    "formsy-react": "^0.14.1"
+    "formsy-react": "^0.17.0"
   },
   "devDependencies": {
     "babel-eslint": "^4.1.0",
