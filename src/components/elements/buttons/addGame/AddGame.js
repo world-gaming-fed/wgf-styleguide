@@ -8,6 +8,7 @@ var AddGame = React.createClass({
     buttons: React.PropTypes.array.isRequired,
     model: React.PropTypes.array,
     loader: React.PropTypes.bool,
+    onOpen: React.PropTypes.func,
     changeHandler: React.PropTypes.func
   },
   getDefaultProps: function() {
@@ -24,6 +25,9 @@ var AddGame = React.createClass({
   toggle: function() {
     this.state.open = !this.state.open;
     this.setState(this.state);
+    if (this.props.onOpen) {
+      this.props.onOpen(this.state.open);
+    }
   },
   onInputChange: function(e) {
     var value = e.currentTarget.value;
