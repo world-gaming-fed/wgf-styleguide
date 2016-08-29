@@ -5,7 +5,6 @@ var update = require('react-addons-update');
 var ReactDOM = require('react-dom');
 
 var ContentNav = function(React) {
-
   return React.createClass({
     displayName: 'ContentNav',
     propTypes: {
