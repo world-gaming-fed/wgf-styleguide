@@ -1,5 +1,6 @@
 var React = require('react');
 var classnames = require('classnames');
+var InlineSVG = require('svg-inline-react');
 
 var Avatar = React.createClass({
   displayName: 'Avatar',
@@ -36,6 +37,21 @@ var Avatar = React.createClass({
     return img;
   },
 
+  renderSvg: function() {
+    if (this.props.format !== 'org') {
+      return null;
+    }
+    return (
+      <svg width="0" height="0">
+        <defs>
+          <clipPath id="clip-shape" clipPathUnits="objectBoundingBox">
+            <polygon points="0.5 0.019, 0.084 0.26, 0.084 0.74, 0.5 0.98, 0.91 0.74, 0.91 0.26, 0.5 0.019" />
+          </clipPath>
+        </defs>
+      </svg>
+    );
+  },
+
   render: function() {
     var classes = [ 'Avatar' ];
 
@@ -54,6 +70,7 @@ var Avatar = React.createClass({
     return (
       <div {...this.props} className={classnames(classes)}>
         { this.renderImg() }
+        { this.renderSvg() }
       </div>
     );
   }
