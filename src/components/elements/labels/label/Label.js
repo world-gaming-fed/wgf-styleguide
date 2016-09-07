@@ -6,7 +6,7 @@ var applyClassNameModifier = require('../../../../utils/applyClassNameModifier')
 var Label = React.createClass({
   displayName: 'Label',
   propTypes: {
-    children: React.PropTypes.string.isRequired,
+    children: React.PropTypes.string,
     modifiers: React.PropTypes.string
   },
   render: function() {

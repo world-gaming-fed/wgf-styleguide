@@ -44,14 +44,15 @@ var TableList = React.createClass({
 
   render: function() {
     var classString = 'TableList';
+    var {className, colWidth, ...other} = this.props;
 
-    if (this.props.className) {
-      classString += ' ' + this.props.className;
+    if (className) {
+      classString += ' ' + className;
     }
 
     return (
-      <table {...this.props} className={classString}>
-        {this.buildColGroup(this.props.colWidth)}
+      <table {...other} className={classString}>
+        {this.buildColGroup(colWidth)}
         {this.props.children}
       </table>
     );

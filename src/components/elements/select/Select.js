@@ -21,10 +21,12 @@ var Select = React.createClass({
     return null;
   },
   render: function() {
+    var {placeholder, ...other} = this.props;
+
     return (
       <div className="Select">
-        <select {...this.props} className="Select__nativeEl">
-          { this.buildPlaceholderOption(this.props.placeholder) }
+        <select {...other} className="Select__nativeEl">
+          { this.buildPlaceholderOption(placeholder) }
           { this.props.children }
         </select>
       </div>

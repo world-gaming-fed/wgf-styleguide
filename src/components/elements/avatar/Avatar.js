@@ -38,21 +38,22 @@ var Avatar = React.createClass({
 
   render: function() {
     var classes = [ 'Avatar' ];
+    var {format, size, ...other} = this.props;
 
-    if (this.props.format) {
-      classes.push('Avatar--' + this.props.format);
+    if (format) {
+      classes.push('Avatar--' + format);
     } else {
       classes.push('Avatar--user');
     }
 
-    if (this.props.size) {
-      classes.push('Avatar--' + this.props.size);
+    if (size) {
+      classes.push('Avatar--' + size);
     } else {
       classes.push('Avatar--small');
     }
 
     return (
-      <div {...this.props} className={classnames(classes)}>
+      <div className={classnames(classes)}>
         { this.renderImg() }
       </div>
     );

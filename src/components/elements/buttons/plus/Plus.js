@@ -41,20 +41,21 @@ var Plus = React.createClass({
   },
 
   render: function() {
-    var classes = [ 'Plus', 'Plus--icon-' + this.props.icon ];
+    var {loader, modifier, icon, ...other} = this.props;
 
-    if (this.props.loader) {
+    var classes = [ 'Plus', 'Plus--icon-' + icon ];
+    if (loader) {
       classes.push('state--loading');
     } else {
       classes.push('state--notLoading');
     }
 
-    if (this.props.modifier) {
-      classes.push('Plus--' + this.props.modifier);
+    if (modifier) {
+      classes.push('Plus--' + modifier);
     }
 
     return (
-      <button {...this.props} className={classNames(classes)}>
+      <button {...other} className={classNames(classes)}>
         {this.buildIcon()}
       </button>
     );
