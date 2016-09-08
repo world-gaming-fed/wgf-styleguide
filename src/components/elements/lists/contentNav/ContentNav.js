@@ -76,14 +76,10 @@ var ContentNav = function(React) {
 
       return (
         <div className={classnames(classes)}>
-          <ul className="ContentNav__list" ref={function(ref) {
-              contentNav = ref;
-            }}>
+          <ul className="ContentNav__list" ref={function(ref) { contentNav = ref; }}>
             { React.Children.map(this.props.children, function(item, i) {
               return (
-                <li ref={function(ref) {
-                    nodes[i] = ref;
-                  }} className="ContentNav__list__item" key={ 'ContentNavItem' + i } onClick={this.placeBar}>
+                <li ref={function(ref) { nodes[i] = ref; }} className="ContentNav__list__item" key={ 'ContentNavItem' + i } onClick={this.placeBar}>
                   {item}
                 </li>
               );

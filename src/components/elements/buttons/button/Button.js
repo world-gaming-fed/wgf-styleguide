@@ -39,7 +39,7 @@ module.exports = function(React) {
     render: function() {
       var classes = [ 'Button' ];
       var {modifier, className, ...other} = this.props;
-      
+
       classes = this.applyModifier(classes);
 
       if (className) {

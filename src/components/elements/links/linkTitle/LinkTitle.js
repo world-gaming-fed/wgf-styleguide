@@ -43,8 +43,6 @@ var LinkTitle = React.createClass({
   },
 
   renderLink(props) {
-
-
     if (_.has(props, 'to')) {
       return (
         <Link {...props} className="LinkTitle__link">{this.props.children} <span className="wgf-icon-arrows_right"></span></Link>
@@ -52,7 +50,7 @@ var LinkTitle = React.createClass({
     } else {
       return (
         <a {...props} className="LinkTitle__link">{this.props.children} <span className="wgf-icon-arrows_right"></span></a>
-      )
+      );
     }
   },
 
