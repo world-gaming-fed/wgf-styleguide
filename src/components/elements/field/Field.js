@@ -60,7 +60,7 @@ module.exports = function(React) {
         <div className={className}>
           <div className="Field__field">
             <label htmlFor={this.props.id}>{this.props.label}</label>
-            <input autoComplete="off" id={this.props.id} name={this.props.name} onChange={this.changeValue} type={this.props.type || 'text'} value={this.getValue()}/>
+            <input autoComplete="off" id={this.props.id} name={this.props.name} onChange={this.changeValue} type={this.props.type || 'text'} value={this.getValue() || ''}/>
           </div>
           <span className="Field__error">{errorMessage}</span>
         </div>

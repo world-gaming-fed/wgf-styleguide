@@ -27,13 +27,14 @@ var TabButton = React.createClass({
   },
   render: function() {
     var classes = [ 'TabButton' ];
+    var {active, ...other} = this.props;
 
     if (this.state.isActive) {
       classes.push('state--active');
     }
 
     return (
-      <button {...this.props} className={ classnames(classes) }>{ this.props.children }</button>
+      <button {...other} className={ classnames(classes) }>{ this.props.children }</button>
     );
   }
 });

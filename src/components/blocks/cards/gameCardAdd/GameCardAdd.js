@@ -10,17 +10,20 @@ var GameCardAdd = React.createClass({
   },
 
   render: function() {
+    var {text, size, ...other} = this.props;
+
     var classes = [ {
       GameCardAdd: true
     } ];
-    if (this.props.size) {
-      classes.push('GameCardAdd--' + this.props.size);
+    if (size) {
+      classes.push('GameCardAdd--' + size);
     }
+
     return (
-      <div className={classnames(classes)} {...this.props}>
+      <div className={classnames(classes)} {...other}>
         <div className="GameCardAdd__inner">
           <span className="GameCardAdd__inner__icon"><Icon>gamepad</Icon></span>
-          <p className="GameCardAdd__inner__text">{this.props.text}</p>
+          <p className="GameCardAdd__inner__text">{text}</p>
         </div>
       </div>
     );

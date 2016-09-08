@@ -38,16 +38,17 @@ module.exports = function(React) {
 
     render: function() {
       var classes = [ 'Button' ];
+      var {modifier, className, ...other} = this.props;
 
       classes = this.applyModifier(classes);
 
-      if (this.props.className) {
-        classes.push(this.props.className);
+      if (className) {
+        classes.push(className);
       }
 
       if (this.props.to) {
         return (
-          <Link {...this.props} className={classnames(classes)}>
+          <Link {...other} className={classnames(classes)}>
             <span className="Button__inner">
               {this.renderIcon()}
               <span className="Button__inner__text">{this.props.children}</span>
@@ -58,7 +59,7 @@ module.exports = function(React) {
 
       if (this.props.href) {
         return (
-          <a {...this.props} className={classnames(classes)}>
+          <a {...other} className={classnames(classes)}>
             <span className="Button__inner">
               {this.renderIcon()}
               <span className="Button__inner__text">{this.props.children}</span>
@@ -68,7 +69,7 @@ module.exports = function(React) {
       }
 
       return (
-        <button {...this.props} className={classnames(classes)}>
+        <button {...other} className={classnames(classes)}>
           <span className="Button__inner">
             {this.renderIcon()}
             <span className="Button__inner__text">{this.props.children}</span>

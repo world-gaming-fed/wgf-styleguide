@@ -9,7 +9,7 @@ gulp.task('default', function(done) {
     'css-compile',
     'build-clean',
     'build-react',
-    'styleguide',
+    // 'styleguide',
     'watch',
     'node',
     done
@@ -21,7 +21,7 @@ gulp.task('build', function(done) {
     'build-clean',
     'build-react',
     'css-compile',
-    'styleguide',
+    // 'styleguide',
     'build-zip',
     done
   );

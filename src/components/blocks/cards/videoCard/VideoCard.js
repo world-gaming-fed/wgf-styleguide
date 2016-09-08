@@ -17,7 +17,7 @@ var VideoCard = React.createClass({
       classes.push('VideoCard--' + this.props.modifier);
     }
 
-    if(this.props.viewers) {
+    if (this.props.viewers) {
       renderViewers = (
         <div className="VideoCard__text__viewers">
           <Icon>basic_eye</Icon>

@@ -2,6 +2,8 @@
 
 var React = require('react');
 var classNames = require('classnames');
+var _ = require('lodash');
+var Link = require('react-router').Link;
 
 var LinkTitle = React.createClass({
   displayName: 'LinkTitle',
@@ -40,16 +42,29 @@ var LinkTitle = React.createClass({
     this.state.headingTag = 'h' + headingLevel;
   },
 
+  renderLink(props) {
+    if (_.has(props, 'to')) {
+      return (
+        <Link {...props} className="LinkTitle__link">{this.props.children} <span className="wgf-icon-arrows_right"></span></Link>
+      );
+    } else {
+      return (
+        <a {...props} className="LinkTitle__link">{this.props.children} <span className="wgf-icon-arrows_right"></span></a>
+      );
+    }
+  },
+
   render: function() {
     var classes = [ 'LinkTitle', 'Title' ];
+    var {headingLevel, titleModifier, ...other} = this.props;
 
-    if (this.props.titleModifier) {
-      classes.push('Title--' + this.props.titleModifier);
+    if (titleModifier) {
+      classes.push('Title--' + titleModifier);
     }
 
     return (
       <this.state.headingTag className={classNames(classes)}>
-        <a {...this.props} className="LinkTitle__link">{this.props.children} <span className="wgf-icon-arrows_right"></span></a>
+        {this.renderLink(other)}
       </this.state.headingTag>
     );
   }

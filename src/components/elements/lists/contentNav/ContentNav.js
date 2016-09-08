@@ -1,10 +1,12 @@
 'use strict';
 
 var classnames = require('classnames');
+var update = require('react-addons-update');
+var ReactDOM = require('react-dom');
 
 var ContentNav = function(React) {
-  var update = React.addons.update;
-
+  var nodes = [];
+  var contentNav;
   return React.createClass({
     displayName: 'ContentNav',
     propTypes: {
@@ -14,54 +16,43 @@ var ContentNav = function(React) {
       return {
         barStyles: {},
         isMounted: false,
-        activeRef: null
+        activeNode: {}
       };
     },
+
     componentDidMount: function() {
-      this.placeBar(null, React.findDOMNode(this.refs[this.findActiveRef()]));
+      this.placeBar(null, this.findActiveRef());
       setTimeout(function() {
         this.setAsMounted();
       }.bind(this));
     },
 
     componentDidUpdate: function() {
-      this.placeBar(null, React.findDOMNode(this.refs[this.findActiveRef()]));
-    },
-
-    getRef: function(element) {
-      var dataId;
-      if (element) {
-        dataId = element.getAttribute('data-reactid').split('$');
-        return dataId[dataId.length - 1];
-      }
-      return this.state.activeRef;
+      this.placeBar(null, this.findActiveRef());
     },
 
     findActiveRef: function() {
-      var ref = 'ContentNavItem0';
-      var activeRef = React.findDOMNode(this.refs.ContentNav).querySelectorAll('.active');
-
-      if (activeRef.length) {
-        ref = this.getRef(activeRef[0].parentNode);
+      var node = nodes[0];
+      var activeNodes = contentNav.querySelectorAll('.active');
+      if (activeNodes.length) {
+        node = activeNodes[0].parentNode;
       }
-      return ref;
+      return node;
     },
 
     placeBar: function(event, element) {
       var el;
       var newState;
-      var newRef = this.getRef(element);
 
       if (event && event.currentTarget) {
-        el = React.findDOMNode(event.currentTarget);
+        el = ReactDOM.findDOMNode(event.currentTarget);
       }
       else {
-        el = React.findDOMNode(element);
+        el = element;
       }
-
-      if (newRef !== this.state.activeRef) {
+      if (el !== this.state.activeNode) {
         newState = update(this.state, {
-          activeRef: {$set: newRef},
+          activeNode: {$set: el},
           barStyles: {$set: {
             width: el.offsetWidth,
             transform: 'translateX(' + el.offsetLeft + 'px)'
@@ -74,7 +65,6 @@ var ContentNav = function(React) {
       var newState = update(this.state, {
         isMounted: {$set: true}
       });
-
       this.setState(newState);
     },
     render: function() {
@@ -86,10 +76,10 @@ var ContentNav = function(React) {
 
       return (
         <div className={classnames(classes)}>
-          <ul className="ContentNav__list" ref="ContentNav">
+          <ul className="ContentNav__list" ref={function(ref) { contentNav = ref; }}>
             { React.Children.map(this.props.children, function(item, i) {
               return (
-                <li ref={'ContentNavItem' + i} className="ContentNav__list__item" key={ 'ContentNavItem' + i } onClick={this.placeBar}>
+                <li ref={function(ref) { nodes[i] = ref; }} className="ContentNav__list__item" key={ 'ContentNavItem' + i } onClick={this.placeBar}>
                   {item}
                 </li>
               );

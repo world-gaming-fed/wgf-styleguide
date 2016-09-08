@@ -31,14 +31,14 @@ var SimpleTabPanel = React.createClass({
       <div className="SimpleTabPanel">
         <div className="SimpleTabPanel__nav">
           { this.props.tabs.map(function(tabText, i) {
-            return (<TabButton onClick={this.setActiveTab.bind(this, i)} active={i === this.state.activePosition}>{ tabText }</TabButton>);
+            return (<TabButton key={'tabButton--' + tabText + '--' + i} onClick={this.setActiveTab.bind(this, i)} active={i === this.state.activePosition}>{ tabText }</TabButton>);
           }.bind(this)) }
         </div>
         <div className="SimpleTabPanel__panels">
           <div className={classnames(classes)}>
-            { this.props.children.map(function(child) {
+            { this.props.children.map(function(child, i) {
               return (
-                <div className="SimpleTabPanel__panels__panel">{ child }</div>
+                <div key={'tabPanels--' + i} className="SimpleTabPanel__panels__panel">{ child }</div>
               );
             }) }
           </div>
