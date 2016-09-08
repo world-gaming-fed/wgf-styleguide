@@ -65,9 +65,8 @@ $Avatar = {
       height: unit($Avatar.sizes.org[2][1],'px');
     }
     .Avatar__image {
-      mask: url("/assets/skin/orga_mask.svg");
-      mask-box-image: url("/assets/skin/orga_mask.svg");
-      mask-repeat: no-repeat;
+      clip-path: url("#clip-shape");
+      clip-path: polygon(50% 1.9%, 8.4% 26%, 8.4% 74%, 50% 98%, 91% 74%, 91% 26%, 50% 1.9%);
     }
   }
 }
