@@ -31,7 +31,12 @@ gulp.task('css-compile', function cssCompile() {
       lost()
     ]))
     .pipe(autoprefixer())
-    .pipe(cleanCSS({compatibility: 'ie8'}))
+    .pipe(cleanCSS({
+      compatibility: 'ie8',
+      advanced: {
+        mergeAdjacent: false
+      }
+    }))
     .pipe(sourcemaps.write('./source_mapping', {
       includeContent: true,
       sourceRoot: '.',
