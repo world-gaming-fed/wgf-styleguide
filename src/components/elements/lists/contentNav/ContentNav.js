@@ -10,7 +10,8 @@ var ContentNav = function(React) {
   return React.createClass({
     displayName: 'ContentNav',
     propTypes: {
-      children: React.PropTypes.node
+      children: React.PropTypes.node,
+      theme: React.PropTypes.string
     },
     getInitialState: function() {
       return {
@@ -72,6 +73,10 @@ var ContentNav = function(React) {
 
       if (this.state.isMounted) {
         classes.push('state--mounted');
+      }
+
+      if (this.props.theme) {
+        classes.push(this.props.theme.toLowerCase());
       }
 
       return (
