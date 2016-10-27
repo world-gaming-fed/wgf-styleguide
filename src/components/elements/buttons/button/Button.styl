@@ -109,6 +109,21 @@ $Button = {
     }
   }
 
+    // Youtube version
+    &--steam {
+      .Button__inner {
+        background-color: $specialePalette.steam;
+        box-shadow: 0 $uiThickness 0 darken($specialePalette.steam, 30%), 0 unit($uiThickness + 5, 'px') 5px 0 $palette.darkGrey;
+      }
+      &:hover:not([disabled]),
+      &:focus {
+        .Button__inner {
+          background-color: lighten($specialePalette.steam, 10%);
+          box-shadow: 0 $uiThickness 0 darken($specialePalette.steam, 20%), 0 unit($uiThickness + 5, 'px') 5px 0 $palette.darkGrey;
+        }
+      }
+    }
+
   // Push Versions
   &--push,
   &--pushForward {
