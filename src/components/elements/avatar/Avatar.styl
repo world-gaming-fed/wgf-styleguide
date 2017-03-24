@@ -64,6 +64,10 @@ $Avatar = {
       width: unit($Avatar.sizes.org[2][0],'px');
       height: unit($Avatar.sizes.org[2][1],'px');
     }
+    &.Avatar--x-large {
+      width: unit($Avatar.sizes.user[3],'px');
+      height: @width;
+    }
     .Avatar__image {
       clip-path: url("#clip-shape");
       clip-path: polygon(50% 1.9%, 8.4% 26%, 8.4% 74%, 50% 98%, 91% 74%, 91% 26%, 50% 1.9%);
